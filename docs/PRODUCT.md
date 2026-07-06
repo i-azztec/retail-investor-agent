@@ -51,9 +51,9 @@ never arithmetic.
 <!-- SCREENSHOT GROUP: reddit-evidence — screenshots of the individual posts/comments above.
      Capture 3-4 single messages (NVDA-not-Enron, no-sign-up terminal, ELI5, prison-time/IRS). -->
 <p>
-  <a href="img/reddit-evidence-1-full.png"><img src="img/reddit-evidence-1-thumb.png" width="240" alt="Reddit: no sign-up tool"></a>
-  <a href="img/reddit-evidence-2-full.png"><img src="img/reddit-evidence-2-thumb.png" width="240" alt="Reddit: explain like I'm 5"></a>
+  <a href="img/main-screen.png"><img src="img/main-screen.png" width="240" alt="Reddit: explain like I'm 5"></a>
   <a href="img/reddit-evidence-3-full.png"><img src="img/reddit-evidence-3-thumb.png" width="240" alt="Reddit: prison time / IRS hallucination"></a>
+  <a href="videos/set-risk-profile.mp4"><img src="img/main-screen.png" width="240" alt="Set risk profile (video)"></a>
 </p>
 
 *(Bonus real-world hook for the forensic feature:*
