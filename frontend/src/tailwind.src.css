@@ -1,0 +1,18 @@
+/*
+ * Tailwind utilities layer (STRETCH T13.3).
+ *
+ * Utilities + theme ONLY — no preflight/base reset — so this layers cleanly on
+ * top of the existing hand-written styles.css without clobbering the working
+ * design. Compiled offline with the standalone Tailwind CLI into
+ * ../dist/tailwind.css (vendored, no Vite build), linked AFTER styles.css so
+ * the added utility classes win where applied.
+ *
+ * Rebuild:
+ *   tailwindcss -i frontend/src/tailwind.src.css -o frontend/dist/tailwind.css --minify
+ */
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../dist/index.html";
+@source "../dist/app.js";

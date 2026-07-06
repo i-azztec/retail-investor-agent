@@ -1,0 +1,1708 @@
+:root {
+  color: #17202a;
+  background: #f3f6f4;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 56px;
+}
+
+/* small buffer under the sticky topnav for any anchor scroll (topnav ~56) */
+#answer {
+  scroll-margin-top: 72px;
+}
+
+.hero {
+  min-height: 84vh;
+  display: grid;
+  align-content: end;
+  gap: 18px;
+  padding: 44px;
+  border-radius: 0;
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(13, 24, 38, 0.26), rgba(13, 24, 38, 0.88)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='760' viewBox='0 0 1200 760'%3E%3Crect width='1200' height='760' fill='%23243443'/%3E%3Cg opacity='.42'%3E%3Cpath d='M0 594 C180 514 292 606 456 500 C624 392 750 442 900 326 C1024 230 1090 258 1200 194' fill='none' stroke='%236fe0b3' stroke-width='8'/%3E%3Cpath d='M0 652 C170 636 308 550 458 586 C610 622 724 530 858 552 C1010 578 1096 486 1200 510' fill='none' stroke='%23e6b450' stroke-width='5'/%3E%3Cpath d='M0 482 C170 390 322 428 480 354 C624 286 754 314 888 250 C1038 178 1110 154 1200 86' fill='none' stroke='%237ea6f8' stroke-width='4'/%3E%3C/g%3E%3Cg opacity='.12' stroke='%23fff'%3E%3Cpath d='M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200M160 0V760M320 0V760M480 0V760M640 0V760M800 0V760M960 0V760M1120 0V760'/%3E%3C/g%3E%3C/svg%3E") center / cover;
+}
+
+.hero-copy {
+  max-width: 680px;
+}
+
+.eyebrow,
+.section-title,
+.intent {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #d9fff2;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(2.4rem, 8vw, 5.6rem);
+  line-height: 0.95;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0;
+  color: #e5edf5;
+  font-size: 1.08rem;
+}
+
+.market-strip,
+.landing-grid,
+.blocks,
+.pros-cons,
+.followups {
+  display: grid;
+  gap: 14px;
+}
+
+.market-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quote,
+.panel-card,
+.block,
+.askbar,
+.answer,
+.modal {
+  border: 1px solid rgba(92, 114, 138, 0.22);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 18px 46px rgba(21, 35, 52, 0.08);
+}
+
+.quote {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  color: #17202a;
+}
+
+.quote span,
+.block h3,
+.footer-list h3,
+.citations h3 {
+  color: #607083;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.quote strong {
+  font-size: 1.25rem;
+}
+
+.up {
+  color: #0f8b68;
+}
+
+.down {
+  color: #c2410c;
+}
+
+.landing-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.chart-card {
+  grid-column: span 2;
+}
+
+.market-map-card {
+  grid-column: 1 / -1;
+}
+
+.market-map-card .block {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.chart-card .block {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.chart-card .line-chart {
+  min-height: 150px;
+}
+
+.panel-card {
+  min-height: 190px;
+  padding: 18px;
+  color: #17202a;
+}
+
+.panel-card p,
+.panel-card .takeaway,
+.panel-card .legend span,
+.panel-card .treemap span,
+.panel-card .treemap small {
+  color: #475569;
+}
+
+.panel-card .block h3 {
+  color: #546477;
+}
+
+.panel-card h2 {
+  margin: 18px 0 8px;
+}
+
+.panel-card .section-title,
+.profile-card .section-title {
+  color: #546477;
+}
+
+/* Section titles carrying a "More" rotation button stretch full width so the
+   button can sit flush right. */
+.panel-card .section-title {
+  display: flex;
+  width: 100%;
+}
+
+/* Fixed-height rotation lists: the "More" button pages through items without
+   the plate growing/shrinking. fitWindow() drops 4->3->2 items on overflow. */
+#curiosity-list,
+#questions-list,
+.news-shelf .news-list {
+  height: 230px;
+  overflow: hidden;
+}
+
+.more-btn {
+  margin-left: auto;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #546477;
+  background: #fff;
+  border: 1px solid #d7dee7;
+  border-radius: 999px;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.more-btn:hover {
+  background: #f2f6fb;
+}
+
+.pros-cons li {
+  list-style: disc;          /* keep the bullet marker */
+  margin: 6px 0;
+}
+
+.pros-cons li > span {
+  display: inline;
+}
+
+.pros-cons .explain-more {
+  margin-left: 8px;
+  vertical-align: baseline;
+}
+
+.explain-more {
+  flex-shrink: 0;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #546477;
+  background: #fff;
+  border: 1px solid #d7dee7;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.explain-more:hover {
+  background: #f2f6fb;
+}
+
+.entity-inline {
+  display: inline;
+  font: inherit;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Ticker chip opens a lightweight modal -> dashed underline, text colour. */
+.entity-inline.chip-stock {
+  text-decoration-style: dashed;
+  text-decoration-color: #94a3b8;
+  color: inherit;
+}
+
+/* Term chip restarts a full search (a "heavier" link) -> solid underline. */
+.entity-inline.chip-term {
+  text-decoration-style: solid;
+  text-decoration-color: #64748b;
+  color: inherit;
+}
+
+.curiosity-item {
+  padding: 10px 0;
+  border-top: 1px solid #eef2f7;
+}
+
+.curiosity-item:first-child {
+  border-top: 0;
+}
+
+.curiosity-item small {
+  display: block;
+  margin-top: 2px;
+  color: #94a3b8;
+}
+
+.mover,
+.questions-card :is(button, a):not(.more-btn),
+.followups :is(button, a):not(.more-btn),
+.link-button {
+  width: 100%;
+  border: 0;
+  background: #edf3ef;
+  color: #17202a;
+  text-align: left;
+}
+
+/* query navigators are now <a href="#q="> for open-in-new-tab support.
+   Each has an explicit color via its own class, so only reset the underline. */
+a[data-query] {
+  text-decoration: none;
+}
+
+.mover,
+.questions-card :is(button, a):not(.more-btn) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 10px;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.mover small,
+.questions-card small,
+.followups small,
+.note span {
+  color: #66798d;
+}
+
+.mover small {
+  grid-column: 1 / -1;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+  margin-top: 16px;
+  padding: 10px 12px;
+  font-weight: 800;
+}
+
+.note {
+  display: grid;
+  gap: 6px;
+  padding-left: 12px;
+  border-left: 3px solid #d8a23a;
+}
+
+.askbar {
+  position: sticky;
+  /* sits directly beneath the sticky .topnav (~56px) so content scrolls
+     under it, not the other way around. */
+  top: 56px;
+  z-index: 15;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0;
+  padding: 12px 14px;
+  /* opaque so scrolled content does not show through the sticky bar */
+  background: #ffffff;
+}
+
+.askbar input {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #17202a;
+}
+
+.askbar button,
+.entity-row button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: #17202a;
+  color: #ffffff;
+  padding: 10px 14px;
+  font-weight: 800;
+}
+
+.ask-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -8px 0 18px;
+}
+
+.ask-suggestions[hidden] {
+  display: none;
+}
+
+.ask-suggestions :is(button, a) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d7e2dc;
+  background: #ffffff;
+  color: #17202a;
+  padding: 8px 10px;
+  font-weight: 800;
+}
+
+.ask-suggestions :is(button, a):hover {
+  background: #e8f7ef;
+  border-color: #9ed7c1;
+}
+
+.ask-suggestions small {
+  color: #0f766e;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.answer {
+  padding: 26px;
+}
+
+.answer-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: start;
+}
+
+.answer h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  line-height: 1.04;
+}
+
+.intent {
+  color: #0f766e;
+}
+
+.meta-pill {
+  padding: 8px 10px;
+  background: #e8f7ef;
+  color: #0f6d51;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.entity-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.entity-row button {
+  background: #edf3ef;
+  color: #17202a;
+  padding: 8px 10px;
+}
+
+/* Type accent so ETFs / stocks / terms are tellable apart at a glance. */
+.entity-row .chip-etf {
+  border-left: 3px solid #0f766e;
+}
+
+.entity-row .chip-stock {
+  border-left: 3px solid #3366cc;
+}
+
+.entity-row .chip-term {
+  border-left: 3px solid #94a3b8;
+  color: #475569;
+}
+
+.calculator-controls {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 14px;
+  background: #f8faf9;
+  border: 1px solid #dce5df;
+}
+
+.calculator-controls label {
+  display: grid;
+  gap: 6px;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.calculator-controls input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #17202a;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.calculator-controls button {
+  align-self: end;
+  border: 0;
+  background: #17202a;
+  color: #ffffff;
+  padding: 11px 14px;
+  font-weight: 900;
+}
+
+.mover:hover,
+.questions-card :is(button, a):hover,
+.followups :is(button, a):hover,
+.entity-row button:hover,
+.link-button:hover,
+.calculator-controls button:hover {
+  background: #dfeae4;
+}
+
+.calculator-controls button:hover {
+  color: #17202a;
+}
+
+.blocks {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.block {
+  min-width: 0;
+  padding: 18px;
+}
+
+.block.wide {
+  grid-column: 1 / -1;
+}
+
+/* LLM prose answers (grounded narrative from _with_generic / generic panels)
+   read as a paragraph, so they take the full width instead of sharing a row
+   with the next chart. Inside .answer-hero this is a flex child, so the
+   grid-column is simply ignored there. */
+.blocks .text-block {
+  grid-column: 1 / -1;
+}
+
+.block h3 {
+  margin: 0 0 16px;
+}
+
+.takeaway,
+.kpi p {
+  margin: 14px 0 0;
+  color: #56677b;
+  line-height: 1.45;
+}
+
+.kpi {
+  display: grid;
+  align-content: center;
+  min-height: 180px;
+}
+
+/* Inside an answer panel the KPI plate should size to its own text, not stretch
+   to match a neighbouring chart's row height. */
+.blocks .block.kpi {
+  align-self: start;
+  min-height: 0;
+  padding: 18px;
+}
+
+.kpi span {
+  color: #607083;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.kpi strong {
+  margin-top: 6px;
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  line-height: 1;
+  color: #0f766e;
+}
+
+.heatmap {
+  display: grid;
+  gap: 6px;
+}
+
+.heatmap b,
+.heat-cell {
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  padding: 6px;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.heat-cell {
+  background: color-mix(in srgb, #e8f7ef calc(100% - (var(--heat) * 74%)), #0f766e calc(var(--heat) * 74%));
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.heat-cell:hover,
+.treemap div:hover,
+.bar-row:hover,
+.legend span:hover {
+  outline: 2px solid rgba(15, 118, 110, 0.38);
+  outline-offset: 2px;
+}
+
+.clickable-chart-item {
+  cursor: pointer;
+}
+
+.clickable-chart-item:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.56);
+  outline-offset: 3px;
+}
+
+.treemap {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 230px;
+  gap: 8px;
+}
+
+.treemap div {
+  display: grid;
+  align-content: end;
+  min-height: 86px;
+  flex-grow: 1;
+  padding: 12px;
+  background: #e8f1ff;
+  border-left: 5px solid #3366cc;
+}
+
+.treemap span,
+.treemap small {
+  color: #607083;
+}
+
+.bars {
+  display: grid;
+  gap: 12px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: minmax(92px, 150px) 1fr 58px;
+  gap: 10px;
+  align-items: center;
+}
+
+.bar-row div {
+  height: 12px;
+  background: #edf2f7;
+}
+
+.bar-row i {
+  display: block;
+  height: 100%;
+  background: #3366cc;
+}
+
+.bar-row strong {
+  text-align: right;
+}
+
+.donut-wrap {
+  display: grid;
+  grid-template-columns: minmax(140px, 200px) 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.donut {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.donut::before {
+  content: "";
+  grid-area: 1 / 1;
+  width: 58%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.donut span {
+  grid-area: 1 / 1;
+  z-index: 1;
+  font-weight: 900;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #46576b;
+}
+
+.legend i {
+  width: 10px;
+  height: 10px;
+}
+
+.line-chart {
+  width: 100%;
+  min-height: 190px;
+  background: linear-gradient(#eef3f7 1px, transparent 1px) 0 0 / 100% 25%;
+}
+
+.axis {
+  stroke: #94a3b8;
+  stroke-width: 1.5;
+}
+
+.axis-label {
+  fill: #475569;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.axis-label.end {
+  text-anchor: end;
+}
+
+.line-chart circle {
+  opacity: 0.78;
+}
+
+.line-chart circle:hover {
+  opacity: 1;
+  r: 7px;
+}
+
+.radar-list,
+.traffic-list,
+.score-list {
+  display: grid;
+  gap: 12px;
+}
+
+.radar-list div {
+  display: grid;
+  grid-template-columns: 100px 1fr 64px;
+  gap: 10px;
+  align-items: center;
+}
+
+meter {
+  width: 100%;
+}
+
+.traffic-list span,
+.score-list p {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  background: #f4f7f9;
+  border-left: 5px solid #94a3b8;
+}
+
+.traffic-list .green {
+  border-left-color: #109778;
+}
+
+.traffic-list .yellow {
+  border-left-color: #d8a23a;
+}
+
+.traffic-list .red {
+  border-left-color: #dc2626;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.pros-cons {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.pros-cons section,
+.footer-list,
+.citations {
+  padding: 16px;
+  background: #f8faf9;
+  border: 1px solid #e2e8f0;
+}
+
+.pros-cons section:first-child {
+  border-left: 3px solid rgba(16, 151, 120, 0.2);
+}
+
+.pros-cons section:last-child {
+  border-left: 3px solid rgba(220, 38, 38, 0.2);
+}
+
+.pros-cons h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+.footer-list,
+.citations {
+  margin-top: 14px;
+}
+
+.footer-list h3,
+.citations h3 {
+  margin: 0 0 8px;
+}
+
+.footer-list p,
+.pros-cons p {
+  margin: 8px 0 0;
+  color: #475569;
+}
+
+.pros-cons ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #475569;
+}
+
+.pros-cons li {
+  margin: 4px 0;
+}
+
+.citations {
+  display: grid;
+  gap: 8px;
+}
+
+.citations a {
+  display: grid;
+  gap: 3px;
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.citations span {
+  color: #64748b;
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.followups {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.followups :is(button, a):not(.more-btn) {
+  display: grid;
+  gap: 8px;
+  min-height: 90px;
+  padding: 14px;
+}
+
+/* Each follow-up column: kind label on top, the question link fills the height,
+   the small "More" pill sits at the bottom-left. */
+.followup-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.followup-slot .followup-label {
+  font-weight: 800;
+  color: #0f766e;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.followup-slot > a[data-query] {
+  align-self: start;
+}
+
+.followup-slot .followup-more-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.error {
+  margin: 12px 0;
+  padding: 12px;
+  background: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.modal {
+  position: relative;
+  width: min(680px, 100%);
+  max-height: min(760px, calc(100vh - 40px));
+  overflow: auto;
+  padding: 24px;
+}
+
+.icon-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  width: auto;
+  min-width: 34px;
+  padding: 0 12px;
+  height: 34px;
+  place-items: center;
+  border: 0;
+  background: #edf3ef;
+}
+
+.modal-title span {
+  color: #0f766e;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.modal-title h2 {
+  margin: 4px 0 10px;
+}
+
+.mini-section {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 14px;
+  background: #f8faf9;
+  border: 1px solid #e2e8f0;
+}
+
+.mini-section h3 {
+  margin: 0;
+  color: #607083;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.mini-section p {
+  margin: 0;
+}
+
+.mini-section a {
+  display: grid;
+  gap: 3px;
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.mini-section a span {
+  color: #64748b;
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.analyst-band div {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.analyst-band i {
+  position: relative;
+  height: 10px;
+  background: linear-gradient(90deg, #dc2626, #d8a23a, #109778);
+}
+
+.analyst-band i::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: var(--mean);
+  width: 4px;
+  height: 20px;
+  background: #17202a;
+}
+
+.modal-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .shell {
+    width: min(100% - 20px, 760px);
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .market-strip,
+  .landing-grid,
+  .blocks,
+  .pros-cons,
+  .followups {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    grid-column: auto;
+  }
+
+  .answer-head,
+  .donut-wrap,
+  .askbar {
+    grid-template-columns: 1fr;
+  }
+
+  .ask-suggestions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .bar-row {
+    grid-template-columns: 1fr;
+  }
+
+  .bar-row strong {
+    text-align: left;
+  }
+
+  .calculator-controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Plotly chart containers (interactive charts replace the hand-drawn SVGs) */
+.plotly-chart {
+  width: 100%;
+  min-height: 180px;
+}
+.plotly-chart .modebar {
+  display: none !important;
+}
+
+/* Risk-profile quiz + chip (concierge personalization) */
+.risk-chip {
+  background: #ffffff;
+  color: #0f766e;
+  border: 1px solid #0f766e;
+  border-radius: 999px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.risk-chip.active {
+  background: #0f766e;
+  color: #ffffff;
+}
+.pill-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+.profile-pill {
+  background: #0f766e;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.quiz-modal .quiz-body {
+  display: grid;
+  gap: 18px;
+  margin: 12px 0 18px;
+}
+.quiz-q {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.quiz-q legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.quiz-opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 14px;
+}
+.quiz-opt.selected {
+  border-color: #0f766e;
+  background: #ecfdf5;
+  font-weight: 600;
+}
+.quiz-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+#quiz-submit {
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: #0f766e;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+#quiz-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Top navigation + landing-first collapse ------------------------------ */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 24px;
+  background: rgba(9, 16, 27, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6fe0b3, #7ea6f8);
+  color: #0b1420;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-name {
+  font-size: 0.98rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.nav-link {
+  border: 0;
+  background: transparent;
+  color: #cdd7e3;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .brand-name { display: none; }
+  .nav-link { padding: 8px 10px; font-size: 0.84rem; }
+}
+
+/* M8-UI: right-aligned group holding nav links + the guest identity chip. */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.identity-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e6edf5;
+  padding: 5px 10px 5px 6px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.identity-chip:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.22); }
+
+.identity-chip .avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6fe0b3, #7ea6f8);
+  color: #0b1420;
+}
+
+.identity-name { display: inline-flex; align-items: center; gap: 6px; }
+
+.synced-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #6fe0b3;
+  background: rgba(111, 224, 179, 0.14);
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.identity-signin {
+  border: 0;
+  background: rgba(126, 166, 248, 0.16);
+  color: #cfe0ff;
+}
+.identity-signin:hover { background: rgba(126, 166, 248, 0.28); color: #ffffff; }
+
+@media (max-width: 720px) {
+  .identity { padding-left: 8px; }
+  .identity-name .synced-badge { display: none; }
+}
+
+/* M8-UI: Sign-in modal (guest access via one-time code, no PII). */
+.signin-modal { max-width: 460px; }
+.signin-section { margin-top: 14px; }
+.signin-label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; color: #33415a; }
+.signin-row { display: flex; gap: 8px; }
+.signin-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.signin-row input:focus { outline: 2px solid #7ea6f8; outline-offset: 1px; }
+.signin-secondary {
+  background: #eef2ff;
+  color: #3b4a6b;
+  border: 1px solid #d7defc;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.signin-secondary:hover { background: #e2e8ff; }
+.signin-msg { margin-top: 8px; font-size: 0.86rem; color: #52607a; min-height: 1em; }
+.signin-msg .ok { color: #0f8a5f; font-weight: 600; }
+.signin-msg .code-value { font-size: 1.05rem; letter-spacing: 0.06em; color: #0b1420; }
+.signin-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 4px;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.signin-divider::before, .signin-divider::after { content: ""; flex: 1; height: 1px; background: #e2e8f0; }
+.signin-footer { margin-top: 18px; padding-top: 12px; border-top: 1px solid #eef2f7; }
+
+/* When an answer is on screen, fold the tall landing away and keep the askbar. */
+body.answering .hero,
+body.answering #landing {
+  display: none;
+}
+
+/* --- Per-block contextual action buttons --------------------------------- */
+.block-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(100, 116, 139, 0.25);
+}
+
+.block-action {
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  background: rgba(148, 163, 184, 0.08);
+  color: #334155;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.block-action:hover {
+  background: rgba(51, 102, 204, 0.12);
+  border-color: rgba(51, 102, 204, 0.5);
+  color: #1e3a8a;
+}
+
+/* --- P3: loading skeletons + explainer popover --------------------------- */
+.skeleton {
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.12) 25%, rgba(148, 163, 184, 0.28) 37%, rgba(148, 163, 184, 0.12) 63%);
+  background-size: 400% 100%;
+  border-radius: 8px;
+  animation: skeleton-pulse 1.3s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+.skeleton-block {
+  display: grid;
+  gap: 14px;
+}
+
+.skeleton-title { height: 18px; width: 45%; }
+.skeleton-chart { height: 180px; width: 100%; }
+.skeleton-line { height: 14px; width: 80%; }
+
+.explain-modal p {
+  line-height: 1.55;
+  color: #334155;
+}
+
+/* --- P5: Overlap/Compare input controls ---------------------------------- */
+.overlap-controls,
+.compare-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.overlap-controls .ticker-fields,
+.compare-controls .ticker-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ticker-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ticker-remove {
+  border: 0;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.ticker-remove:hover {
+  color: #dc2626;
+}
+
+.overlap-controls .overlap-ticker,
+.compare-controls .compare-ticker {
+  width: 92px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #17202a;
+  padding: 9px 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.overlap-controls button,
+.compare-controls button {
+  align-self: center;
+  border: 0;
+  background: #17202a;
+  color: #ffffff;
+  padding: 10px 13px;
+  font-weight: 800;
+}
+
+.overlap-controls button[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.controls-hint {
+  flex-basis: 100%;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* --- P6: landing news shelf ---------------------------------------------- */
+.news-shelf .news-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.news-item {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(100, 116, 139, 0.18);
+}
+
+.news-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.news-item .news-title {
+  color: #17202a;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.news-item .news-title:hover {
+  color: #1e3a8a;
+}
+
+.news-item small {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #66798d;
+  font-size: 0.78rem;
+}
+
+.news-ticker {
+  border: 1px solid #c7d7cd;
+  background: #edf3ef;
+  color: #0f6d51;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.72rem;
+}
+
+.news-ticker:hover {
+  background: #dcefe4;
+}
+
+.demo-badge {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(217, 162, 58, 0.18);
+  color: #a86a12;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* --- P7: Learn index screen ---------------------------------------------- */
+.learn-group {
+  margin-top: 22px;
+}
+
+.learn-group h3 {
+  color: #607083;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.learn-card {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  border: 1px solid rgba(92, 114, 138, 0.22);
+  background: #ffffff;
+  color: #17202a;
+  padding: 14px;
+  border-radius: 14px;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.learn-card:hover {
+  border-color: rgba(51, 102, 204, 0.5);
+  box-shadow: 0 10px 26px rgba(21, 35, 52, 0.1);
+}
+
+.learn-card strong {
+  font-size: 1.02rem;
+}
+
+.learn-card span {
+  color: #52606d;
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.term-detail {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(100, 116, 139, 0.2);
+  color: #334155;
+  line-height: 1.55;
+}
+
+/* --- P8: Home investor-profile card + quiz help -------------------------- */
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  border: 1px solid rgba(15, 118, 110, 0.28);
+  border-radius: 16px;
+  background: #f4fbf8;
+}
+
+.profile-card .profile-status {
+  margin: 6px 0 0;
+  color: #475569;
+  max-width: 640px;
+}
+
+.profile-card .risk-chip {
+  min-height: 40px;
+  padding: 0 18px;
+  font-size: 14px;
+}
+
+.profile-card .privacy-note {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 0.8rem;
+  max-width: 640px;
+}
+
+.profile-card .privacy-note .link-button {
+  font-size: 0.8rem;
+  vertical-align: baseline;
+}
+
+.quiz-help {
+  margin-top: 8px;
+}
+
+.quiz-help summary {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.quiz-help p {
+  margin: 6px 0 0;
+  color: #52606d;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.quiz-modal {
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.answer-hero {
+  /* Own full-width row (text + KPI pair). Without this it sits in one grid
+     column and the next chart squeezes in beside it — 3 blocks in a row. */
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 8px;
+}
+.answer-hero .text-block {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+.answer-hero-kpi {
+  flex: 0 0 auto;
+  width: 200px;
+}
+.answer-hero-kpi .block.kpi {
+  margin: 0;
+  height: 100%;
+}
+/* The number must fit its narrow sidebar — keep it bold but not billboard-sized,
+   and let long values (e.g. "USD 194.83") wrap instead of overflowing. */
+.answer-hero-kpi .block.kpi strong {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .answer-hero { flex-direction: column; }
+  .answer-hero-kpi { width: 100%; }
+}
+
+/* Answer-block actions (detail/simpler/follow-up) render as a .block-actions
+   pill row INSIDE the LLM text block — no separate .answer-actions rule needed. */
+.followup-hint {
+  min-height: 0;
+  margin: 6px 0 0;
+}
+.followup-hint-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1f6feb;
+  background: #eaf1ff;
+  border: 1px solid #cfe0ff;
+  border-radius: 999px;
+}
+.followup-hint-chip button {
+  border: none;
+  background: none;
+  color: #1f6feb;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0;
+  line-height: 1;
+}

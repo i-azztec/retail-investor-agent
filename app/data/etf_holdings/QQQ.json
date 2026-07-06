@@ -1,0 +1,23 @@
+{
+  "ticker": "QQQ",
+  "name": "Invesco QQQ Trust",
+  "expense_ratio": 0.002,
+  "as_of": "2026-06-30",
+  "source": "issuer",
+  "source_url": "https://www.invesco.com/qqq-etf/en/about.html",
+  "note": "Bundled prototype cache; replace via holdings refresh script for production.",
+  "holdings": [
+    { "ticker": "AAPL", "name": "Apple", "weight": 0.1100, "sector": "Technology" },
+    { "ticker": "MSFT", "name": "Microsoft", "weight": 0.1000, "sector": "Technology" },
+    { "ticker": "NVDA", "name": "NVIDIA", "weight": 0.0850, "sector": "Technology" },
+    { "ticker": "AMZN", "name": "Amazon.com", "weight": 0.0600, "sector": "Consumer Discretionary" },
+    { "ticker": "META", "name": "Meta Platforms", "weight": 0.0500, "sector": "Communication Services" },
+    { "ticker": "AVGO", "name": "Broadcom", "weight": 0.0450, "sector": "Technology" },
+    { "ticker": "GOOGL", "name": "Alphabet Class A", "weight": 0.0350, "sector": "Communication Services" },
+    { "ticker": "GOOG", "name": "Alphabet Class C", "weight": 0.0300, "sector": "Communication Services" },
+    { "ticker": "TSLA", "name": "Tesla", "weight": 0.0250, "sector": "Consumer Discretionary" },
+    { "ticker": "COST", "name": "Costco Wholesale", "weight": 0.0200, "sector": "Consumer Staples" },
+    { "ticker": "NFLX", "name": "Netflix", "weight": 0.0180, "sector": "Communication Services" },
+    { "ticker": "AMD", "name": "Advanced Micro Devices", "weight": 0.0160, "sector": "Technology" }
+  ]
+}

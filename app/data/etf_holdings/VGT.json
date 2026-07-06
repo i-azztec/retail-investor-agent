@@ -1,0 +1,23 @@
+{
+  "ticker": "VGT",
+  "name": "Vanguard Information Technology ETF",
+  "expense_ratio": 0.0009,
+  "as_of": "2026-06-30",
+  "source": "issuer",
+  "source_url": "https://investor.vanguard.com/investment-products/etfs/profile/vgt#portfolio-composition",
+  "note": "Bundled prototype cache; replace via holdings refresh script for production.",
+  "holdings": [
+    { "ticker": "AAPL", "name": "Apple", "weight": 0.1600, "sector": "Technology" },
+    { "ticker": "MSFT", "name": "Microsoft", "weight": 0.1550, "sector": "Technology" },
+    { "ticker": "NVDA", "name": "NVIDIA", "weight": 0.1400, "sector": "Technology" },
+    { "ticker": "AVGO", "name": "Broadcom", "weight": 0.0500, "sector": "Technology" },
+    { "ticker": "CRM", "name": "Salesforce", "weight": 0.0250, "sector": "Technology" },
+    { "ticker": "ORCL", "name": "Oracle", "weight": 0.0220, "sector": "Technology" },
+    { "ticker": "AMD", "name": "Advanced Micro Devices", "weight": 0.0200, "sector": "Technology" },
+    { "ticker": "ADBE", "name": "Adobe", "weight": 0.0180, "sector": "Technology" },
+    { "ticker": "CSCO", "name": "Cisco Systems", "weight": 0.0170, "sector": "Technology" },
+    { "ticker": "ACN", "name": "Accenture", "weight": 0.0150, "sector": "Technology" },
+    { "ticker": "QCOM", "name": "Qualcomm", "weight": 0.0140, "sector": "Technology" },
+    { "ticker": "TXN", "name": "Texas Instruments", "weight": 0.0130, "sector": "Technology" }
+  ]
+}

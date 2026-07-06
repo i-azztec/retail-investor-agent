@@ -1,0 +1,39 @@
+{
+  "ticker": "NVDA",
+  "name": "NVIDIA Corporation",
+  "price": 172.4,
+  "currency": "USD",
+  "change_pct": 0.018,
+  "price_series": [
+    { "date": "2026-06-26", "close": 168.1 },
+    { "date": "2026-06-29", "close": 170.3 },
+    { "date": "2026-06-30", "close": 172.4 }
+  ],
+  "fundamentals": [
+    { "year": 2024, "revenue": 60900.0, "net_income": 29760.0, "margin": 0.489, "debt": 9700.0, "dividend": 0.04 },
+    { "year": 2025, "revenue": 96300.0, "net_income": 52400.0, "margin": 0.544, "debt": 9100.0, "dividend": 0.04 },
+    { "year": 2026, "revenue": 130500.0, "net_income": 72880.0, "margin": 0.558, "debt": 8500.0, "dividend": 0.04 }
+  ],
+  "snowflake": [
+    { "axis": "value", "value": 1.5, "max": 5 },
+    { "axis": "growth", "value": 5.0, "max": 5 },
+    { "axis": "health", "value": 4.5, "max": 5 },
+    { "axis": "past", "value": 4.8, "max": 5 },
+    { "axis": "dividend", "value": 0.5, "max": 5 }
+  ],
+  "traffic": [
+    { "label": "Quality", "status": "green" },
+    { "label": "Value", "status": "red" },
+    { "label": "Momentum", "status": "green" }
+  ],
+  "percentiles": [
+    { "metric": "P/E", "percentile": 85, "context": "expensive vs its own 5-year history" }
+  ],
+  "news": [
+    { "title": "NVIDIA unveils next-gen datacenter GPU", "url": "https://example.com/news/1", "published": "2026-06-30", "source": "yfinance" }
+  ],
+  "analyst": { "low": 120.0, "mean": 195.0, "high": 260.0, "currency": "USD" },
+  "citations": [
+    { "id": "c1", "label": "NVDA price & fundamentals", "source": "yfinance", "url": "https://finance.yahoo.com/quote/NVDA", "as_of_date": "2026-06-30" }
+  ]
+}

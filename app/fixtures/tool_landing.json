@@ -1,0 +1,711 @@
+{
+  "market": {
+    "as_of": "2026-06-30T16:00:00-04:00",
+    "indices": [
+      {
+        "name": "S&P 500",
+        "value": 6284.1,
+        "change_pct": 0.004
+      },
+      {
+        "name": "Nasdaq",
+        "value": 20841.6,
+        "change_pct": 0.008
+      },
+      {
+        "name": "Dow",
+        "value": 44120.3,
+        "change_pct": 0.001
+      }
+    ],
+    "movers": [
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA",
+        "change_pct": 0.018,
+        "reason": "New datacenter GPU announced",
+        "spark": [
+          168.1,
+          170.3,
+          172.4
+        ]
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "change_pct": -0.032,
+        "reason": "Delivery miss vs expectations",
+        "spark": [
+          252.0,
+          248.5,
+          244.0
+        ]
+      }
+    ],
+    "fear_greed": 62,
+    "citations": [
+      {
+        "id": "c1",
+        "label": "Index & mover quotes",
+        "source": "yfinance",
+        "url": "https://finance.yahoo.com",
+        "as_of_date": "2026-06-30"
+      }
+    ]
+  },
+  "chart_of_day": {
+    "type": "chart.line",
+    "title": "S&P 500 - last 6 months",
+    "series": [
+      {
+        "name": "S&P 500",
+        "points": [
+          {
+            "x": "2025-12-31",
+            "y": 5334.99
+          },
+          {
+            "x": "2026-01-01",
+            "y": 5313.5
+          },
+          {
+            "x": "2026-01-02",
+            "y": 5264.21
+          },
+          {
+            "x": "2026-01-05",
+            "y": 5270.45
+          },
+          {
+            "x": "2026-01-06",
+            "y": 5202.75
+          },
+          {
+            "x": "2026-01-07",
+            "y": 5224.85
+          },
+          {
+            "x": "2026-01-08",
+            "y": 5277.11
+          },
+          {
+            "x": "2026-01-09",
+            "y": 5302.51
+          },
+          {
+            "x": "2026-01-12",
+            "y": 5324.38
+          },
+          {
+            "x": "2026-01-13",
+            "y": 5335.93
+          },
+          {
+            "x": "2026-01-14",
+            "y": 5350.97
+          },
+          {
+            "x": "2026-01-15",
+            "y": 5330.49
+          },
+          {
+            "x": "2026-01-16",
+            "y": 5321.43
+          },
+          {
+            "x": "2026-01-19",
+            "y": 5318.6
+          },
+          {
+            "x": "2026-01-20",
+            "y": 5330.1
+          },
+          {
+            "x": "2026-01-21",
+            "y": 5292.57
+          },
+          {
+            "x": "2026-01-22",
+            "y": 5341.83
+          },
+          {
+            "x": "2026-01-23",
+            "y": 5324.77
+          },
+          {
+            "x": "2026-01-26",
+            "y": 5322.87
+          },
+          {
+            "x": "2026-01-27",
+            "y": 5325.74
+          },
+          {
+            "x": "2026-01-28",
+            "y": 5360.18
+          },
+          {
+            "x": "2026-01-29",
+            "y": 5396.48
+          },
+          {
+            "x": "2026-01-30",
+            "y": 5452.77
+          },
+          {
+            "x": "2026-02-02",
+            "y": 5384.22
+          },
+          {
+            "x": "2026-02-03",
+            "y": 5387.56
+          },
+          {
+            "x": "2026-02-04",
+            "y": 5402.52
+          },
+          {
+            "x": "2026-02-05",
+            "y": 5414.99
+          },
+          {
+            "x": "2026-02-06",
+            "y": 5491.32
+          },
+          {
+            "x": "2026-02-09",
+            "y": 5506.35
+          },
+          {
+            "x": "2026-02-10",
+            "y": 5493.79
+          },
+          {
+            "x": "2026-02-11",
+            "y": 5561.79
+          },
+          {
+            "x": "2026-02-12",
+            "y": 5568.16
+          },
+          {
+            "x": "2026-02-13",
+            "y": 5612.05
+          },
+          {
+            "x": "2026-02-16",
+            "y": 5676.81
+          },
+          {
+            "x": "2026-02-17",
+            "y": 5688.13
+          },
+          {
+            "x": "2026-02-18",
+            "y": 5727.09
+          },
+          {
+            "x": "2026-02-19",
+            "y": 5705.79
+          },
+          {
+            "x": "2026-02-20",
+            "y": 5621.18
+          },
+          {
+            "x": "2026-02-23",
+            "y": 5626.5
+          },
+          {
+            "x": "2026-02-24",
+            "y": 5593.31
+          },
+          {
+            "x": "2026-02-25",
+            "y": 5610.64
+          },
+          {
+            "x": "2026-02-26",
+            "y": 5648.82
+          },
+          {
+            "x": "2026-02-27",
+            "y": 5697.38
+          },
+          {
+            "x": "2026-03-02",
+            "y": 5695.9
+          },
+          {
+            "x": "2026-03-03",
+            "y": 5717.15
+          },
+          {
+            "x": "2026-03-04",
+            "y": 5715.61
+          },
+          {
+            "x": "2026-03-05",
+            "y": 5717.92
+          },
+          {
+            "x": "2026-03-06",
+            "y": 5686.17
+          },
+          {
+            "x": "2026-03-09",
+            "y": 5678.35
+          },
+          {
+            "x": "2026-03-10",
+            "y": 5701.27
+          },
+          {
+            "x": "2026-03-11",
+            "y": 5717.56
+          },
+          {
+            "x": "2026-03-12",
+            "y": 5719.43
+          },
+          {
+            "x": "2026-03-13",
+            "y": 5750.21
+          },
+          {
+            "x": "2026-03-16",
+            "y": 5739.01
+          },
+          {
+            "x": "2026-03-17",
+            "y": 5746.64
+          },
+          {
+            "x": "2026-03-18",
+            "y": 5741.21
+          },
+          {
+            "x": "2026-03-19",
+            "y": 5774.19
+          },
+          {
+            "x": "2026-03-20",
+            "y": 5806.32
+          },
+          {
+            "x": "2026-03-23",
+            "y": 5839.93
+          },
+          {
+            "x": "2026-03-24",
+            "y": 5796.92
+          },
+          {
+            "x": "2026-03-25",
+            "y": 5843.4
+          },
+          {
+            "x": "2026-03-26",
+            "y": 5834.24
+          },
+          {
+            "x": "2026-03-27",
+            "y": 5785.07
+          },
+          {
+            "x": "2026-03-30",
+            "y": 5759.2
+          },
+          {
+            "x": "2026-03-31",
+            "y": 5747.28
+          },
+          {
+            "x": "2026-04-01",
+            "y": 5756.71
+          },
+          {
+            "x": "2026-04-02",
+            "y": 5766.85
+          },
+          {
+            "x": "2026-04-03",
+            "y": 5829.39
+          },
+          {
+            "x": "2026-04-06",
+            "y": 5782.0
+          },
+          {
+            "x": "2026-04-07",
+            "y": 5845.06
+          },
+          {
+            "x": "2026-04-08",
+            "y": 5842.21
+          },
+          {
+            "x": "2026-04-09",
+            "y": 5794.31
+          },
+          {
+            "x": "2026-04-10",
+            "y": 5757.41
+          },
+          {
+            "x": "2026-04-13",
+            "y": 5790.99
+          },
+          {
+            "x": "2026-04-14",
+            "y": 5780.98
+          },
+          {
+            "x": "2026-04-15",
+            "y": 5753.72
+          },
+          {
+            "x": "2026-04-16",
+            "y": 5782.86
+          },
+          {
+            "x": "2026-04-17",
+            "y": 5890.55
+          },
+          {
+            "x": "2026-04-20",
+            "y": 5905.84
+          },
+          {
+            "x": "2026-04-21",
+            "y": 5962.25
+          },
+          {
+            "x": "2026-04-22",
+            "y": 5943.47
+          },
+          {
+            "x": "2026-04-23",
+            "y": 5983.05
+          },
+          {
+            "x": "2026-04-24",
+            "y": 5926.3
+          },
+          {
+            "x": "2026-04-27",
+            "y": 5919.93
+          },
+          {
+            "x": "2026-04-28",
+            "y": 5921.29
+          },
+          {
+            "x": "2026-04-29",
+            "y": 5867.03
+          },
+          {
+            "x": "2026-04-30",
+            "y": 5866.7
+          },
+          {
+            "x": "2026-05-01",
+            "y": 5853.44
+          },
+          {
+            "x": "2026-05-04",
+            "y": 5886.6
+          },
+          {
+            "x": "2026-05-05",
+            "y": 5937.42
+          },
+          {
+            "x": "2026-05-06",
+            "y": 5915.05
+          },
+          {
+            "x": "2026-05-07",
+            "y": 5914.19
+          },
+          {
+            "x": "2026-05-08",
+            "y": 5927.16
+          },
+          {
+            "x": "2026-05-11",
+            "y": 5905.5
+          },
+          {
+            "x": "2026-05-12",
+            "y": 5923.31
+          },
+          {
+            "x": "2026-05-13",
+            "y": 5927.43
+          },
+          {
+            "x": "2026-05-14",
+            "y": 5930.65
+          },
+          {
+            "x": "2026-05-15",
+            "y": 5914.92
+          },
+          {
+            "x": "2026-05-18",
+            "y": 5897.35
+          },
+          {
+            "x": "2026-05-19",
+            "y": 5914.14
+          },
+          {
+            "x": "2026-05-20",
+            "y": 5908.11
+          },
+          {
+            "x": "2026-05-21",
+            "y": 5874.88
+          },
+          {
+            "x": "2026-05-22",
+            "y": 5867.22
+          },
+          {
+            "x": "2026-05-25",
+            "y": 5863.85
+          },
+          {
+            "x": "2026-05-26",
+            "y": 5856.8
+          },
+          {
+            "x": "2026-05-27",
+            "y": 5925.46
+          },
+          {
+            "x": "2026-05-28",
+            "y": 5974.08
+          },
+          {
+            "x": "2026-05-29",
+            "y": 5968.12
+          },
+          {
+            "x": "2026-06-01",
+            "y": 5944.67
+          },
+          {
+            "x": "2026-06-02",
+            "y": 5970.45
+          },
+          {
+            "x": "2026-06-03",
+            "y": 6015.49
+          },
+          {
+            "x": "2026-06-04",
+            "y": 6037.76
+          },
+          {
+            "x": "2026-06-05",
+            "y": 6040.9
+          },
+          {
+            "x": "2026-06-08",
+            "y": 6048.63
+          },
+          {
+            "x": "2026-06-09",
+            "y": 6041.34
+          },
+          {
+            "x": "2026-06-10",
+            "y": 6029.36
+          },
+          {
+            "x": "2026-06-11",
+            "y": 6117.51
+          },
+          {
+            "x": "2026-06-12",
+            "y": 6117.01
+          },
+          {
+            "x": "2026-06-15",
+            "y": 6088.81
+          },
+          {
+            "x": "2026-06-16",
+            "y": 6146.14
+          },
+          {
+            "x": "2026-06-17",
+            "y": 6187.57
+          },
+          {
+            "x": "2026-06-18",
+            "y": 6216.24
+          },
+          {
+            "x": "2026-06-19",
+            "y": 6194.51
+          },
+          {
+            "x": "2026-06-22",
+            "y": 6234.52
+          },
+          {
+            "x": "2026-06-23",
+            "y": 6217.01
+          },
+          {
+            "x": "2026-06-24",
+            "y": 6199.73
+          },
+          {
+            "x": "2026-06-25",
+            "y": 6216.91
+          },
+          {
+            "x": "2026-06-26",
+            "y": 6237.47
+          },
+          {
+            "x": "2026-06-29",
+            "y": 6304.91
+          },
+          {
+            "x": "2026-06-30",
+            "y": 6284.1
+          }
+        ]
+      }
+    ],
+    "x_type": "date",
+    "takeaway": "The index moved about +17.8% over the period.",
+    "citation_id": "c1"
+  },
+  "term_of_day": {
+    "term": "expense ratio",
+    "eli5": "It's the yearly fee a fund charges you, shown as a small percentage of the money you have in it.",
+    "example": "A 0.75% expense ratio on $10,000 means about $75 per year.",
+    "detail_md": "Deducted automatically from fund returns; small differences compound over decades.",
+    "citation": {
+      "id": "g1",
+      "label": "Expense Ratio — investor.gov",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio"
+    }
+  },
+  "curiosity": [
+    {
+      "kind": "insider",
+      "text": "A CEO bought $1.2M of their own shares near a 52-week low.",
+      "note": "Form 4 lag ~2 days; not a buy signal."
+    },
+    {
+      "kind": "history",
+      "text": "On this day in 2008, markets swung sharply during the financial crisis.",
+      "note": "Historical context only."
+    },
+    {
+      "kind": "congress",
+      "text": "Members of Congress must disclose stock trades within 45 days under the STOCK Act.",
+      "note": "Search efts.house.gov for disclosures."
+    },
+    {
+      "kind": "insider",
+      "text": "Studies show insider buying near 52-week lows historically outperforms the market by ~3–5% over the next year.",
+      "note": "Past performance is not indicative of future results."
+    },
+    {
+      "kind": "history",
+      "text": "The S&P 500 has recovered from every bear market in its history — the average recovery time is about 2 years.",
+      "note": "Future recoveries are not guaranteed."
+    },
+    {
+      "kind": "history",
+      "text": "A $10,000 investment in the S&P 500 in 2000 was worth roughly $7,800 by 2010 — the 'lost decade' for equities.",
+      "note": "Sequence-of-returns risk is real."
+    },
+    {
+      "kind": "insider",
+      "text": "Cluster insider buying — multiple executives buying simultaneously — is considered a stronger signal than a single trade.",
+      "note": "Still correlational, not causal."
+    },
+    {
+      "kind": "congress",
+      "text": "In 2023, over 50 members of Congress reported trades that may have conflicted with committee work they oversaw.",
+      "note": "Source: Unusual Whales / Capitol Trades."
+    },
+    {
+      "kind": "history",
+      "text": "Warren Buffett's best single-year return was +129% in 1976; his worst was −32% in 1974.",
+      "note": "Even the best investors have bad years."
+    }
+  ],
+  "generated_questions": [
+    {
+      "text": "Do VOO, QQQ and VGT actually overlap?",
+      "feature": "overlap",
+      "prefill_query": "I hold VOO, QQQ and VGT — how much do they really overlap?"
+    },
+    {
+      "text": "Is NVDA a buy? Show red flags.",
+      "feature": "forensic",
+      "prefill_query": "Should I buy NVDA? Show forensic red flags and the bear case."
+    },
+    {
+      "text": "Am I overpaying in fees?",
+      "feature": "beginner_fees",
+      "prefill_query": "I'm a beginner with $10,000 — am I overpaying in fund fees?"
+    },
+    {
+      "text": "What if I invested $10k in TSLA 5 years ago?",
+      "feature": "growth",
+      "prefill_query": "What if I invested $10,000 in TSLA 5 years ago?"
+    },
+    {
+      "text": "NVDA vs AMD side by side",
+      "feature": "compare",
+      "prefill_query": "Compare NVDA vs AMD side by side."
+    },
+    {
+      "text": "Tell me about AAPL",
+      "feature": "ticker",
+      "prefill_query": "Tell me about AAPL."
+    },
+    {
+      "text": "Explain P/E ratio simply",
+      "feature": "term",
+      "prefill_query": "Explain P/E ratio in simple terms."
+    },
+    {
+      "text": "Is TSLA a red-flag stock?",
+      "feature": "forensic",
+      "prefill_query": "Should I buy TSLA? Show forensic red flags and the bear case."
+    },
+    {
+      "text": "VOO vs QQQ vs VGT — fee drag",
+      "feature": "beginner_fees",
+      "prefill_query": "I have $50,000 over 30 years with expense ratio 0.25% and return 6% - am I overpaying in fund fees?"
+    },
+    {
+      "text": "What is Beneish M-Score?",
+      "feature": "term",
+      "prefill_query": "Explain Beneish M-Score in simple terms."
+    },
+    {
+      "text": "MSFT vs GOOGL comparison",
+      "feature": "compare",
+      "prefill_query": "Compare MSFT vs GOOGL side by side."
+    },
+    {
+      "text": "What if I invested $5k in NVDA 3 years ago?",
+      "feature": "growth",
+      "prefill_query": "What if I invested $5,000 in NVDA 3 years ago?"
+    }
+  ]
+}

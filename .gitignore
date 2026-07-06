@@ -1,0 +1,28 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# node / frontend
+node_modules/
+frontend/.vite/
+
+# data cache (runtime yfinance/EDGAR cache — not source of truth)
+app/data/.cache/
+
+# runtime SQLite turn/profile store (store.py) — not source of truth
+app/data/*.db
+app/data/*.db-wal
+app/data/*.db-shm
+
+# os / editor
+.DS_Store
+Thumbs.db

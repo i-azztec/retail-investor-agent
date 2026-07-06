@@ -1,0 +1,27 @@
+[project]
+name = "retail-investor-agent"
+version = "0.1.0"
+description = "Interactive research panel for retail investors — ADK multi-agent + FastAPI + React. Kaggle AI Agents capstone."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.139.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.6",
+    "uvicorn[standard]>=0.49.0",
+    "yfinance>=0.2.40", # M1: live prices/fundamentals/news (free Yahoo)
+    "google-adk[db]>=1.0", # M-C: multi-agent runtime (router/analyst/skeptic/narrator)
+    "litellm>=1.0", # M-B: provider bridge for gpt-5.5 via LiteLlm (dev without Gemini key)
+    "mcp>=1.0", # M-F: external MCP interface over deterministic tools
+    "aiosqlite>=0.22.1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

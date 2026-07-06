@@ -1,0 +1,20 @@
+{
+  "inputs": { "amount": 10000.0, "years": 20, "expense_ratio": 0.0075, "gross_return": 0.07 },
+  "series": [
+    { "year": 0, "with_fee": 10000.0, "without_fee": 10000.0 },
+    { "year": 5, "with_fee": 13520.0, "without_fee": 14026.0 },
+    { "year": 10, "with_fee": 18280.0, "without_fee": 19672.0 },
+    { "year": 15, "with_fee": 24720.0, "without_fee": 27590.0 },
+    { "year": 20, "with_fee": 33422.0, "without_fee": 38697.0 }
+  ],
+  "total_lost": 5275.0,
+  "end_with_fee": 33422.0,
+  "end_without_fee": 38697.0,
+  "assumptions": [
+    "constant 7%/year gross return",
+    "dividends reinvested",
+    "no taxes or trading costs",
+    "expense ratio charged annually on balance"
+  ],
+  "takeaway": "A 0.75% fee quietly costs about $5,275 over 20 years on a $10,000 investment."
+}

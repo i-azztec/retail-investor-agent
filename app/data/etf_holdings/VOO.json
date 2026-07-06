@@ -1,0 +1,23 @@
+{
+  "ticker": "VOO",
+  "name": "Vanguard S&P 500 ETF",
+  "expense_ratio": 0.0003,
+  "as_of": "2026-06-30",
+  "source": "issuer",
+  "source_url": "https://investor.vanguard.com/investment-products/etfs/profile/voo#portfolio-composition",
+  "note": "Bundled prototype cache; replace via holdings refresh script for production.",
+  "holdings": [
+    { "ticker": "AAPL", "name": "Apple", "weight": 0.0700, "sector": "Technology" },
+    { "ticker": "MSFT", "name": "Microsoft", "weight": 0.0650, "sector": "Technology" },
+    { "ticker": "NVDA", "name": "NVIDIA", "weight": 0.0600, "sector": "Technology" },
+    { "ticker": "AMZN", "name": "Amazon.com", "weight": 0.0380, "sector": "Consumer Discretionary" },
+    { "ticker": "META", "name": "Meta Platforms", "weight": 0.0280, "sector": "Communication Services" },
+    { "ticker": "GOOGL", "name": "Alphabet Class A", "weight": 0.0220, "sector": "Communication Services" },
+    { "ticker": "GOOG", "name": "Alphabet Class C", "weight": 0.0180, "sector": "Communication Services" },
+    { "ticker": "BRK.B", "name": "Berkshire Hathaway", "weight": 0.0180, "sector": "Financials" },
+    { "ticker": "LLY", "name": "Eli Lilly", "weight": 0.0150, "sector": "Health Care" },
+    { "ticker": "AVGO", "name": "Broadcom", "weight": 0.0140, "sector": "Technology" },
+    { "ticker": "JPM", "name": "JPMorgan Chase", "weight": 0.0130, "sector": "Financials" },
+    { "ticker": "XOM", "name": "Exxon Mobil", "weight": 0.0110, "sector": "Energy" }
+  ]
+}

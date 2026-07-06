@@ -1,0 +1,12 @@
+{
+  "term": "expense ratio",
+  "eli5": "It's the yearly fee a fund charges you, shown as a small percentage of the money you have in it.",
+  "example": "A 0.75% expense ratio on $10,000 means about $75 per year — charged automatically, whether the fund goes up or down.",
+  "detail_md": "The **expense ratio** is the fund's annual operating cost divided by its assets. It's deducted from the fund's returns, so you never see a separate bill. Small differences compound: over decades, a 0.75% vs 0.05% ratio can differ by thousands of dollars.",
+  "citation": {
+    "id": "g1",
+    "label": "Expense Ratio — investor.gov glossary",
+    "source": "investor.gov",
+    "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio"
+  }
+}

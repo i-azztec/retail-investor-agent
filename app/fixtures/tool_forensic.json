@@ -1,0 +1,40 @@
+{
+  "ticker": "NVDA",
+  "name": "NVIDIA Corporation",
+  "as_of": "2026-06-30",
+  "scores": [
+    {
+      "name": "Altman Z",
+      "value": 8.9,
+      "formula": "1.2·A + 1.4·B + 3.3·C + 0.6·D + 1.0·E",
+      "inputs": { "working_capital_to_assets": 0.31, "retained_earnings_to_assets": 0.45, "ebit_to_assets": 0.38, "mktcap_to_liabilities": 12.4, "sales_to_assets": 0.72 },
+      "interpretation": "Well above 2.99 — low bankruptcy risk.",
+      "band": "safe",
+      "source_line": "10-K FY26 balance sheet & income statement",
+      "citation_id": "c1"
+    },
+    {
+      "name": "Beneish M",
+      "value": -2.4,
+      "formula": "-4.84 + 0.92·DSRI + 0.528·GMI + 0.404·AQI + 0.892·SGI + 0.115·DEPI - 0.172·SGAI + 4.679·TATA - 0.327·LVGI",
+      "inputs": { "DSRI": 1.02, "GMI": 0.98, "SGI": 1.35, "TATA": 0.04 },
+      "interpretation": "Below -1.78 — no strong signal of earnings manipulation.",
+      "band": "safe",
+      "source_line": "10-K FY26 vs FY25",
+      "citation_id": "c1"
+    },
+    {
+      "name": "Piotroski F",
+      "value": 7,
+      "formula": "sum of 9 binary financial-health tests",
+      "inputs": { "positive_net_income": 1, "positive_cfo": 1, "cfo_gt_ni": 1, "lower_leverage": 0 },
+      "interpretation": "7/9 — financially strong.",
+      "band": "safe",
+      "source_line": "10-K FY26",
+      "citation_id": "c1"
+    }
+  ],
+  "citations": [
+    { "id": "c1", "label": "NVDA 10-K FY26", "source": "SEC EDGAR", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NVDA&type=10-K", "as_of_date": "2026-02-20" }
+  ]
+}

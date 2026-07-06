@@ -1,0 +1,312 @@
+{
+  "funds": [
+    {
+      "ticker": "VOO",
+      "name": "Vanguard S&P 500 ETF",
+      "expense_ratio": 0.0003,
+      "as_of": "2026-06-30"
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "expense_ratio": 0.002,
+      "as_of": "2026-06-30"
+    },
+    {
+      "ticker": "VGT",
+      "name": "Vanguard Information Technology ETF",
+      "expense_ratio": 0.0009,
+      "as_of": "2026-06-30"
+    }
+  ],
+  "pairwise_overlap_pct": {
+    "VOO|QQQ": 0.315,
+    "VOO|VGT": 0.209,
+    "QQQ|VGT": 0.356
+  },
+  "combined_overlap_pct": 0.457,
+  "shared_holdings": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "weight_by_fund": {
+        "VOO": 0.07,
+        "QQQ": 0.11,
+        "VGT": 0.16
+      },
+      "combined_weight": 0.113333
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "weight_by_fund": {
+        "VOO": 0.065,
+        "QQQ": 0.1,
+        "VGT": 0.155
+      },
+      "combined_weight": 0.106667
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "weight_by_fund": {
+        "VOO": 0.06,
+        "QQQ": 0.085,
+        "VGT": 0.14
+      },
+      "combined_weight": 0.095
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "weight_by_fund": {
+        "VOO": 0.014,
+        "QQQ": 0.045,
+        "VGT": 0.05
+      },
+      "combined_weight": 0.036333
+    },
+    {
+      "name": "Amazon.com",
+      "ticker": "AMZN",
+      "weight_by_fund": {
+        "VOO": 0.038,
+        "QQQ": 0.06
+      },
+      "combined_weight": 0.032667
+    },
+    {
+      "name": "Meta Platforms",
+      "ticker": "META",
+      "weight_by_fund": {
+        "VOO": 0.028,
+        "QQQ": 0.05
+      },
+      "combined_weight": 0.026
+    },
+    {
+      "name": "Alphabet Class A",
+      "ticker": "GOOGL",
+      "weight_by_fund": {
+        "VOO": 0.022,
+        "QQQ": 0.035
+      },
+      "combined_weight": 0.019
+    },
+    {
+      "name": "Alphabet Class C",
+      "ticker": "GOOG",
+      "weight_by_fund": {
+        "VOO": 0.018,
+        "QQQ": 0.03
+      },
+      "combined_weight": 0.016
+    },
+    {
+      "name": "Advanced Micro Devices",
+      "ticker": "AMD",
+      "weight_by_fund": {
+        "QQQ": 0.016,
+        "VGT": 0.02
+      },
+      "combined_weight": 0.012
+    }
+  ],
+  "look_through": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "combined_weight": 0.113333,
+      "sector": "Technology"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "combined_weight": 0.106667,
+      "sector": "Technology"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "combined_weight": 0.095,
+      "sector": "Technology"
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "combined_weight": 0.036333,
+      "sector": "Technology"
+    },
+    {
+      "name": "Amazon.com",
+      "ticker": "AMZN",
+      "combined_weight": 0.032667,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "name": "Meta Platforms",
+      "ticker": "META",
+      "combined_weight": 0.026,
+      "sector": "Communication Services"
+    },
+    {
+      "name": "Alphabet Class A",
+      "ticker": "GOOGL",
+      "combined_weight": 0.019,
+      "sector": "Communication Services"
+    },
+    {
+      "name": "Alphabet Class C",
+      "ticker": "GOOG",
+      "combined_weight": 0.016,
+      "sector": "Communication Services"
+    },
+    {
+      "name": "Advanced Micro Devices",
+      "ticker": "AMD",
+      "combined_weight": 0.012,
+      "sector": "Technology"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "combined_weight": 0.008333,
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "combined_weight": 0.008333,
+      "sector": "Technology"
+    },
+    {
+      "name": "Oracle",
+      "ticker": "ORCL",
+      "combined_weight": 0.007333,
+      "sector": "Technology"
+    },
+    {
+      "name": "Costco Wholesale",
+      "ticker": "COST",
+      "combined_weight": 0.006667,
+      "sector": "Consumer Staples"
+    },
+    {
+      "name": "Berkshire Hathaway",
+      "ticker": "BRK.B",
+      "combined_weight": 0.006,
+      "sector": "Financials"
+    },
+    {
+      "name": "Netflix",
+      "ticker": "NFLX",
+      "combined_weight": 0.006,
+      "sector": "Communication Services"
+    },
+    {
+      "name": "Adobe",
+      "ticker": "ADBE",
+      "combined_weight": 0.006,
+      "sector": "Technology"
+    },
+    {
+      "name": "Cisco Systems",
+      "ticker": "CSCO",
+      "combined_weight": 0.005667,
+      "sector": "Technology"
+    },
+    {
+      "name": "Eli Lilly",
+      "ticker": "LLY",
+      "combined_weight": 0.005,
+      "sector": "Health Care"
+    },
+    {
+      "name": "Accenture",
+      "ticker": "ACN",
+      "combined_weight": 0.005,
+      "sector": "Technology"
+    },
+    {
+      "name": "Qualcomm",
+      "ticker": "QCOM",
+      "combined_weight": 0.004667,
+      "sector": "Technology"
+    },
+    {
+      "name": "JPMorgan Chase",
+      "ticker": "JPM",
+      "combined_weight": 0.004333,
+      "sector": "Financials"
+    },
+    {
+      "name": "Texas Instruments",
+      "ticker": "TXN",
+      "combined_weight": 0.004333,
+      "sector": "Technology"
+    },
+    {
+      "name": "Exxon Mobil",
+      "ticker": "XOM",
+      "combined_weight": 0.003667,
+      "sector": "Energy"
+    }
+  ],
+  "sector_breakdown": [
+    {
+      "sector": "Technology",
+      "weight": 0.404667
+    },
+    {
+      "sector": "Communication Services",
+      "weight": 0.067
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "weight": 0.041
+    },
+    {
+      "sector": "Financials",
+      "weight": 0.010333
+    },
+    {
+      "sector": "Consumer Staples",
+      "weight": 0.006667
+    },
+    {
+      "sector": "Health Care",
+      "weight": 0.005
+    },
+    {
+      "sector": "Energy",
+      "weight": 0.003667
+    }
+  ],
+  "top10_concentration_pct": 0.465333,
+  "citations": [
+    {
+      "id": "c1",
+      "label": "VOO holdings",
+      "source": "issuer",
+      "url": "https://investor.vanguard.com/investment-products/etfs/profile/voo#portfolio-composition",
+      "as_of_date": "2026-06-30",
+      "note": "Bundled prototype cache; replace via holdings refresh script for production."
+    },
+    {
+      "id": "c2",
+      "label": "QQQ holdings",
+      "source": "issuer",
+      "url": "https://www.invesco.com/qqq-etf/en/about.html",
+      "as_of_date": "2026-06-30",
+      "note": "Bundled prototype cache; replace via holdings refresh script for production."
+    },
+    {
+      "id": "c3",
+      "label": "VGT holdings",
+      "source": "issuer",
+      "url": "https://investor.vanguard.com/investment-products/etfs/profile/vgt#portfolio-composition",
+      "as_of_date": "2026-06-30",
+      "note": "Bundled prototype cache; replace via holdings refresh script for production."
+    }
+  ]
+}

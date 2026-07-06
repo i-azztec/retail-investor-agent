@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retail Investor Agent</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/tailwind.css" />
+  </head>
+  <body>
+    <nav class="topnav" aria-label="Primary">
+      <button class="brand" data-nav="home" title="Back to the landing screen">
+        <span class="brand-mark">RIA</span>
+        <span class="brand-name">Retail Investor Agent</span>
+      </button>
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links"></div>
+        <div class="identity" id="identity"></div>
+      </div>
+    </nav>
+    <main class="shell">
+      <section class="askbar shadow-lg rounded-2xl ring-1 ring-slate-200" aria-label="Ask a question">
+        <span>Search</span>
+        <input id="query" value="I hold VOO, QQQ and VGT - how much do they really overlap?" placeholder="Ask a question or pick a workflow below" autocomplete="off" autocapitalize="off" spellcheck="false" />
+        <button id="ask">Ask</button>
+      </section>
+      <div id="followup-hint" class="followup-hint" aria-live="polite"></div>
+      <section id="ask-suggestions" class="ask-suggestions" aria-label="Suggested questions" hidden></section>
+      <section class="hero" id="landing">
+        <div class="hero-copy">
+          <div class="eyebrow">Market desk</div>
+          <h1>Retail Investor Agent</h1>
+          <p>Interactive research panels with charts, citations, risks, and clickable drilldowns.</p>
+        </div>
+      </section>
+      <div id="error"></div>
+      <section id="answer"></section>
+    </main>
+    <div id="modal"></div>
+    <script src="/plotly.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

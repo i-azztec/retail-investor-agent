@@ -1,0 +1,32 @@
+{
+  "_comment": "Deterministic demo headlines (real stories, early July 2026) for offline/demo runs. Single source of truth: swap _read_news in app/tools/ticker_card.py for a live provider without touching the NewsItem contract or callers.",
+  "NVDA": [
+    { "title": "Nvidia edges lower as investors take profits after a record first half for chips", "url": "https://finance.yahoo.com/quote/NVDA", "published": "2026-07-01", "source": "news cache" },
+    { "title": "Nvidia launches revenue-sharing program giving AI startups compute for a cut of future revenue", "url": "https://finance.yahoo.com/quote/NVDA", "published": "2026-07-02", "source": "news cache" },
+    { "title": "Valar Atomics partners with Nvidia on a small Utah data-center", "url": "https://finance.yahoo.com/quote/NVDA", "published": "2026-07-03", "source": "news cache" }
+  ],
+  "TSLA": [
+    { "title": "Tesla falls about 7.5% despite record quarterly deliveries", "url": "https://finance.yahoo.com/quote/TSLA", "published": "2026-07-02", "source": "news cache" },
+    { "title": "Truist keeps Tesla at Hold ahead of the delivery print", "url": "https://finance.yahoo.com/quote/TSLA", "published": "2026-07-02", "source": "news cache" },
+    { "title": "Michael Burry discloses bets against Tesla and chip stocks", "url": "https://finance.yahoo.com/quote/TSLA", "published": "2026-07-01", "source": "news cache" }
+  ],
+  "AAPL": [
+    { "title": "Apple breaks out, up about 4.8% on the week amid new-iPhone reports", "url": "https://finance.yahoo.com/quote/AAPL", "published": "2026-07-02", "source": "news cache" },
+    { "title": "Apple plans at least five new iPhone models, report says", "url": "https://finance.yahoo.com/quote/AAPL", "published": "2026-07-02", "source": "news cache" },
+    { "title": "Apple Q3 earnings due July 30; iPhone demand in focus", "url": "https://finance.yahoo.com/quote/AAPL", "published": "2026-07-03", "source": "news cache" }
+  ],
+  "_market": [
+    { "title": "Tech-led pullback drags the S&P 500 and Nasdaq lower", "url": "https://finance.yahoo.com/quote/%5EGSPC", "published": "2026-07-01", "source": "news cache", "ticker": "SPY" },
+    { "title": "Micron hits an all-time high near $1,051 after blockbuster earnings", "url": "https://finance.yahoo.com/quote/MU", "published": "2026-06-30", "source": "news cache", "ticker": "MU" },
+    { "title": "Alphabet to replace Verizon in the Dow", "url": "https://finance.yahoo.com/quote/GOOGL", "published": "2026-07-01", "source": "news cache", "ticker": "GOOGL" },
+    { "title": "Earnings season kicks off July 14 with the banks; about 22% S&P EPS growth expected", "url": "https://finance.yahoo.com/quote/%5EGSPC", "published": "2026-07-03", "source": "news cache", "ticker": "SPY" },
+    { "title": "Nvidia edges lower as investors take profits after a record first half for chips", "url": "https://finance.yahoo.com/quote/NVDA", "published": "2026-07-03", "source": "news cache", "ticker": "NVDA" },
+    { "title": "Apple breaks out on new-iPhone reports; five models said to be planned", "url": "https://finance.yahoo.com/quote/AAPL", "published": "2026-07-02", "source": "news cache", "ticker": "AAPL" },
+    { "title": "Microsoft touches a fresh high as AI-cloud demand keeps Azure growth in the low-30s", "url": "https://finance.yahoo.com/quote/MSFT", "published": "2026-07-02", "source": "news cache", "ticker": "MSFT" },
+    { "title": "Treasury yields ease as June jobs data comes in softer than expected", "url": "https://finance.yahoo.com/quote/%5ETNX", "published": "2026-07-02", "source": "news cache" },
+    { "title": "Oil slips below $70 as OPEC+ signals more supply for August", "url": "https://finance.yahoo.com/quote/CL%3DF", "published": "2026-07-01", "source": "news cache", "ticker": "XOM" },
+    { "title": "Amazon climbs on upbeat Prime Day early-sales readthrough", "url": "https://finance.yahoo.com/quote/AMZN", "published": "2026-07-03", "source": "news cache", "ticker": "AMZN" },
+    { "title": "Fed minutes show officials split on the timing of the next rate cut", "url": "https://finance.yahoo.com/quote/%5EGSPC", "published": "2026-06-30", "source": "news cache" },
+    { "title": "Eli Lilly extends gains as weight-loss pill data impresses analysts", "url": "https://finance.yahoo.com/quote/LLY", "published": "2026-07-01", "source": "news cache", "ticker": "LLY" }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "expense-ratio": {
+    "term": "Expense ratio",
+    "aliases": ["expense ratio", "fund fee", "ter", "management fee"],
+    "eli5": "The yearly fee a fund charges you, shown as a small percentage of the money you hold in it.",
+    "example": "A 0.75% expense ratio on $10,000 is about $75 a year — taken automatically, whether the fund rises or falls.",
+    "detail_md": "The **expense ratio** is a fund's annual operating cost divided by its assets. It's deducted from returns, so you never get a separate bill. Small differences compound: over decades a 0.75% vs 0.05% ratio can differ by thousands of dollars.",
+    "citation": {
+      "id": "g_expense-ratio",
+      "label": "Expense Ratio — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio"
+    }
+  },
+  "exchange-traded-fund-etf": {
+    "term": "Exchange-traded fund (ETF)",
+    "aliases": ["etf", "exchange traded fund", "exchange-traded fund"],
+    "eli5": "A basket of many investments you can buy and sell like a single stock during the trading day.",
+    "example": "Buying one share of an S&P 500 ETF gives you a tiny slice of 500 companies at once.",
+    "detail_md": "An **ETF** holds a collection of assets (stocks, bonds, etc.) and trades on an exchange throughout the day. It usually tracks an index, tends to have low fees, and gives instant diversification in one purchase.",
+    "citation": {
+      "id": "g_etf",
+      "label": "Exchange-Traded Fund (ETF) — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/exchange-traded-fund-etf"
+    }
+  },
+  "dividend": {
+    "term": "Dividend",
+    "aliases": ["dividends"],
+    "eli5": "A share of a company's profit paid out to the people who own its stock.",
+    "example": "If a stock pays a $2 annual dividend and you own 10 shares, you receive $20 that year.",
+    "detail_md": "A **dividend** is a distribution of earnings to shareholders, usually paid quarterly in cash. Not all companies pay them; young or fast-growing firms often reinvest profits instead.",
+    "citation": {
+      "id": "g_dividend",
+      "label": "Dividend — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
+    }
+  },
+  "index-fund": {
+    "term": "Index fund",
+    "aliases": ["index funds", "index investing"],
+    "eli5": "A fund that simply tries to match a market index instead of picking winners.",
+    "example": "An S&P 500 index fund aims to earn whatever the S&P 500 earns — no more, no less.",
+    "detail_md": "An **index fund** passively tracks a benchmark (like the S&P 500). Because it doesn't pay managers to pick stocks, fees are typically very low, and it gives broad diversification.",
+    "citation": {
+      "id": "g_index-fund",
+      "label": "Index Fund — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/index-fund"
+    }
+  },
+  "compound-interest": {
+    "term": "Compound interest",
+    "aliases": ["compounding", "compound growth"],
+    "eli5": "Earning returns not just on your money, but also on the returns it already made.",
+    "example": "$1,000 at 7% becomes ~$1,967 in 10 years — the extra growth comes from returns earning returns.",
+    "detail_md": "**Compound interest** means your gains get reinvested and start generating their own gains. Given enough time, it's the main engine behind long-term investing growth.",
+    "citation": {
+      "id": "g_compound-interest",
+      "label": "Compound Interest — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/compound-interest"
+    }
+  },
+  "diversification": {
+    "term": "Diversification",
+    "aliases": ["diversify", "diversified"],
+    "eli5": "Not putting all your eggs in one basket — spreading money across different investments.",
+    "example": "Holding stocks from many sectors means one industry's bad year won't sink your whole portfolio.",
+    "detail_md": "**Diversification** reduces risk by spreading investments across assets that don't all move together. If holdings overlap heavily (same companies/sector), the benefit shrinks even when it looks diversified.",
+    "citation": {
+      "id": "g_diversification",
+      "label": "Diversification — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/diversification"
+    }
+  },
+  "portfolio-overlap": {
+    "term": "Portfolio overlap",
+    "aliases": ["overlap", "fund overlap"],
+    "eli5": "When two funds you own hold many of the same companies, so they double up instead of spreading out.",
+    "example": "An S&P 500 fund and a tech fund both hold Apple and Microsoft — buying both doesn't diversify as much as it seems.",
+    "detail_md": "**Overlap** measures how much two funds share the same holdings by weight. High overlap means your money is concentrated in fewer companies than the number of funds suggests — the opposite of true diversification.",
+    "citation": {
+      "id": "g_overlap",
+      "label": "Diversification — investor.gov glossary (related)",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/diversification",
+      "note": "investor.gov has no dedicated 'overlap' page; linked to the closely related Diversification entry."
+    }
+  },
+  "concentration": {
+    "term": "Concentration",
+    "aliases": ["portfolio concentration", "concentrated portfolio", "top-10 concentration"],
+    "eli5": "When a large share of your money depends on a small number of companies, sectors, or themes.",
+    "example": "If your top 10 holdings are 47% of the portfolio, a few names can drive almost half of your result.",
+    "detail_md": "**Concentration** is the opposite side of diversification: fewer bets matter more. It is not automatically bad, but it means one company or sector shock can move the whole portfolio more than expected.",
+    "citation": {
+      "id": "g_concentration",
+      "label": "Diversification — investor.gov glossary (related)",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/diversification",
+      "note": "Linked to the closely related Diversification entry."
+    }
+  },
+  "altman-z-score": {
+    "term": "Altman Z-Score",
+    "aliases": ["altman z", "altman z-score", "z-score"],
+    "eli5": "A financial stress screen that combines several accounting numbers to estimate bankruptcy risk.",
+    "example": "A very low Z-Score is a warning light: it says the balance sheet may deserve closer inspection.",
+    "detail_md": "**Altman Z-Score** is a screening formula, not a prediction machine. It mixes profitability, leverage, liquidity, solvency, and sales efficiency to flag companies that may be financially stressed.",
+    "citation": {
+      "id": "g_altman_z",
+      "label": "Financial statements — investor.gov",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/public-companies",
+      "note": "Related investor.gov background on public-company financial reporting."
+    }
+  },
+  "beneish-m-score": {
+    "term": "Beneish M-Score",
+    "aliases": ["beneish m", "beneish m-score", "m-score"],
+    "eli5": "An accounting red-flag screen that looks for patterns sometimes associated with earnings manipulation.",
+    "example": "A concerning M-Score does not prove fraud; it means the accounting trends deserve a closer look.",
+    "detail_md": "**Beneish M-Score** combines ratios around receivables, margins, asset quality, sales growth, depreciation, expenses, leverage, and accruals. It is best treated as a smoke detector, not a verdict.",
+    "citation": {
+      "id": "g_beneish_m",
+      "label": "Financial statements — investor.gov",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/public-companies",
+      "note": "Related investor.gov background on public-company financial reporting."
+    }
+  },
+  "piotroski-f-score": {
+    "term": "Piotroski F-Score",
+    "aliases": ["piotroski f", "piotroski f-score", "f-score"],
+    "eli5": "A 0-to-9 checklist for financial strength, based on profitability, leverage, liquidity, and operating efficiency.",
+    "example": "A higher F-Score means more boxes are checked; a low score means more fundamentals need explaining.",
+    "detail_md": "**Piotroski F-Score** is a rule-based quality screen. It rewards companies with positive profits/cash flow, improving margins, lower leverage, better liquidity, and no dilution.",
+    "citation": {
+      "id": "g_piotroski_f",
+      "label": "Financial statements — investor.gov",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/public-companies",
+      "note": "Related investor.gov background on public-company financial reporting."
+    }
+  },
+  "form-4": {
+    "term": "Form 4",
+    "aliases": ["form 4", "insider filing", "insider filings", "insider activity"],
+    "eli5": "A public filing that reports when a company insider buys or sells that company's securities.",
+    "example": "If a director buys shares, the transaction is typically reported on Form 4 soon after the trade.",
+    "detail_md": "**Form 4** is useful context, but it is not a buy or sell signal by itself. Insiders may trade for many reasons, and the filing arrives after the transaction.",
+    "citation": {
+      "id": "g_form_4",
+      "label": "SEC EDGAR company filings",
+      "source": "SEC EDGAR",
+      "url": "https://www.sec.gov/edgar/search/",
+      "note": "Related source for public-company ownership and transaction filings."
+    }
+  },
+  "dividend-safety": {
+    "term": "Dividend safety",
+    "aliases": ["dividend safety", "safe dividend", "dividend coverage", "payout safety"],
+    "eli5": "A check of whether a company can likely keep paying its dividend from earnings and cash flow.",
+    "example": "A dividend looks less safe if the company pays out more cash than it generates.",
+    "detail_md": "**Dividend safety** usually looks at payout ratio, free-cash-flow coverage, debt pressure, and the history of cuts. It is a risk screen, not a guarantee.",
+    "citation": {
+      "id": "g_dividend_safety",
+      "label": "Dividend — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend",
+      "note": "Related definition; full safety analysis depends on company financials."
+    }
+  },
+  "market-movers": {
+    "term": "Market movers",
+    "aliases": ["market mover", "market movers", "movers", "stocks making moves"],
+    "eli5": "Stocks, sectors, or indexes that moved noticeably more than usual during a trading session.",
+    "example": "A stock might become a market mover after earnings, guidance, a lawsuit, or a macro news shock.",
+    "detail_md": "**Market movers** are a starting point for research. A big move tells you something changed; it does not tell you whether the move is justified.",
+    "citation": {
+      "id": "g_market_movers",
+      "label": "Investor.gov investing basics",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics",
+      "note": "General investor education source for interpreting market information."
+    }
+  },
+  "pe-ratio": {
+    "term": "P/E ratio",
+    "aliases": ["p/e", "pe", "p/e ratio", "price earnings", "price-to-earnings", "p/e percentile", "valuation percentile"],
+    "eli5": "A quick valuation shortcut: how many dollars investors pay for one dollar of a company's earnings.",
+    "example": "A P/E of 30 means investors are paying about $30 for each $1 of annual earnings.",
+    "detail_md": "**P/E ratio** compares price with earnings. A high P/E can mean investors expect strong growth, or that the stock is expensive. A percentile adds context by asking whether today's P/E is high or low versus a comparison history.",
+    "citation": {
+      "id": "g_pe_ratio",
+      "label": "Price-to-Earnings Ratio — investor.gov glossary",
+      "source": "investor.gov",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/price-earnings-ratio"
+    }
+  }
+}

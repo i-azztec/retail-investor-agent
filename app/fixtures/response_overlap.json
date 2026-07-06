@@ -1,0 +1,83 @@
+{
+  "query": "I hold VOO, QQQ and VGT — how much do they really overlap?",
+  "intent": "overlap",
+  "headline": "Your three funds are far from independent — about 46% of your money sits in the same companies.",
+  "eli5": "You bought three funds hoping to spread your bets, but they lean on the same big tech names. So they'll tend to rise and fall together, which is less diversification than it looks.",
+  "blocks": [
+    { "type": "kpi", "label": "Combined overlap", "value": "46%", "takeaway": "Nearly half your money is duplicated across the three funds.", "citation_id": "c1" },
+    {
+      "type": "chart.heatmap",
+      "title": "Pairwise overlap by weight",
+      "x_labels": ["VOO", "QQQ", "VGT"],
+      "y_labels": ["VOO", "QQQ", "VGT"],
+      "matrix": [[1.0, 0.315, 0.209], [0.315, 1.0, 0.356], [0.209, 0.356, 1.0]],
+      "unit": "%",
+      "takeaway": "QQQ and VGT overlap most (~36%).",
+      "citation_id": "c1"
+    },
+    {
+      "type": "chart.treemap",
+      "title": "Where your money really goes (look-through)",
+      "items": [
+        { "label": "Apple", "value": 11.3, "group": "Technology" },
+        { "label": "Microsoft", "value": 10.7, "group": "Technology" },
+        { "label": "NVIDIA", "value": 9.5, "group": "Technology" }
+      ],
+      "takeaway": "Three companies alone account for ~31% of the combined portfolio."
+    },
+    {
+      "type": "chart.bar",
+      "title": "Top shared holdings",
+      "orientation": "h",
+      "items": [
+        { "label": "Apple", "value": 11.3, "unit": "%" },
+        { "label": "Microsoft", "value": 10.7, "unit": "%" },
+        { "label": "NVIDIA", "value": 9.5, "unit": "%" }
+      ],
+      "takeaway": "These names appear in all three funds."
+    },
+    {
+      "type": "chart.donut",
+      "title": "Sector breakdown of the combined portfolio",
+      "items": [
+        { "label": "Technology", "value": 52 },
+        { "label": "Communication Services", "value": 14 },
+        { "label": "Consumer Discretionary", "value": 12 },
+        { "label": "Financials", "value": 10 },
+        { "label": "Other", "value": 12 }
+      ],
+      "takeaway": "Over half sits in one sector."
+    },
+    { "type": "kpi", "label": "Top-10 concentration", "value": "47%", "takeaway": "Your ten largest positions are 47% of everything." }
+  ],
+  "pros": [
+    "Very low fees across all three funds.",
+    "Broad exposure to leading US companies."
+  ],
+  "cons": [
+    "The 'diversification' is partly an illusion — ~46% is the same companies.",
+    "Heavy tech concentration means all three can fall together in a tech downturn."
+  ],
+  "assumptions": [
+    "Weights based on most recent quarterly holdings (may lag current market)."
+  ],
+  "citations": [
+    { "id": "c1", "label": "Fund holdings (N-PORT)", "source": "SEC EDGAR", "url": "https://www.sec.gov/cgi-bin/browse-edgar", "as_of_date": "2026-06-30", "note": "quarterly holdings" }
+  ],
+  "entities": [
+    { "text": "VOO", "kind": "ticker", "ref": "VOO" },
+    { "text": "QQQ", "kind": "ticker", "ref": "QQQ" },
+    { "text": "VGT", "kind": "ticker", "ref": "VGT" },
+    { "text": "AAPL", "kind": "ticker", "ref": "AAPL" },
+    { "text": "overlap", "kind": "term", "ref": "portfolio-overlap" }
+  ],
+  "followups": [
+    { "text": "Which single fund could I drop to remove the duplication?", "kind": "deeper", "prefill_query": "If I want to avoid overlap, which one of VOO, QQQ, VGT should I keep?" },
+    { "text": "What would add real diversification?", "kind": "wider", "prefill_query": "What bond or international ETF would actually diversify a VOO+QQQ+VGT portfolio?" },
+    { "text": "Explain 'overlap' simply", "kind": "simpler", "prefill_query": "What does fund overlap mean in simple terms?" }
+  ],
+  "honesty_notes": [
+    "ETF holdings are quarterly (N-PORT) and cached — they can lag the live composition."
+  ],
+  "meta": { "generated_by": "gemini-2.5-pro", "cached": true, "latency_ms": 0 }
+}
