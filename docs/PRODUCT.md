@@ -53,7 +53,7 @@ never arithmetic.
 <p>
   <a href="img/main-screen.png"><img src="img/main-screen.png" width="240" alt="Reddit: explain like I'm 5"></a>
   <a href="img/reddit-evidence-3-full.png"><img src="img/reddit-evidence-3-thumb.png" width="240" alt="Reddit: prison time / IRS hallucination"></a>
-  <a href="videos/set-risk-profile.mp4"><img src="img/main-screen.png" width="240" alt="Set risk profile (video)"></a>
+  <video src="https://github.com/user-attachments/assets/6c6d7330-9fdd-4257-ae12-da6148a14fbd" controls width="240"></video>
 </p>
 
 *(Bonus real-world hook for the forensic feature:*
