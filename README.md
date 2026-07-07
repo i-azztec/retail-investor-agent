@@ -1,5 +1,9 @@
 # Retail Investor Agent
 
+<p align="center">
+  <img src="docs/img/coins-growth-wordcloud.png" width="620" alt="What beginner retail investors actually ask for — a needs word-cloud">
+</p>
+
 **A read-only second opinion for beginner retail investors — grounded, cited, and
 built needs-first.**
 
@@ -11,6 +15,18 @@ unit-tested — the LLM only produces language.
 
 > Educational capstone prototype — **not investment advice**. Read-only: it
 > informs, it never trades.
+
+---
+
+## Contents
+
+| Document | What's inside |
+|---|---|
+| **[Product](docs/PRODUCT.md)** | Needs → accents → features, real-investor evidence, demo path, screenshots + screen-recordings |
+| **[Architecture](docs/ARCHITECTURE.md)** | Diagrams, course-concept → file mapping, design decisions, eval results, backend evidence |
+| **[Slides (PDF)](docs/slides/Retail-Investor-Agent_presentation.pdf)** | The presentation deck |
+
+**On this page:** [Problem & solution](#problem--solution) · [What works now](#what-works-now) · [Demo](#demo) · [Screenshots](#screenshots) · [Architecture at a glance](#architecture-at-a-glance) · [Local run](#local-run) · [Docker](#docker) · [Cloud Run](#cloud-run) · [API](#api) · [Security & privacy](#security--privacy) · [Evaluation](#evaluation)
 
 ---
 
@@ -37,19 +53,29 @@ login and no PII. Full story: [`docs/PRODUCT.md`](docs/PRODUCT.md).
 Some data (ETF holdings, forensic inputs, dense charts) is cached for demo
 reliability; the UI surfaces this through honesty notes and citations.
 
+## Demo
+
+A full walkthrough — landing, ETF overlap, ticker cards, the forensic red-flag
+screen, the fee calculator and the concierge follow-up:
+
+<video src="https://github.com/user-attachments/assets/864f55f0-8151-4ba1-ab6b-4ab65b3312cc" controls width="640"></video>
+
+📄 **Slides:** [`docs/slides/Retail-Investor-Agent_presentation.pdf`](docs/slides/Retail-Investor-Agent_presentation.pdf)
+
 ## Screenshots
 
-<!-- SCREENSHOT GROUP: product overview — same files as docs/PRODUCT.md galleries -->
+<!-- teaser strip — full gallery (per-feature screenshots + videos) lives in docs/PRODUCT.md -->
 <p>
-  <a href="docs/img/landing-full.png"><img src="docs/img/landing-thumb.png" width="240" alt="Landing page"></a>
-  <a href="docs/img/overlap-heatmap-full.png"><img src="docs/img/overlap-heatmap-thumb.png" width="240" alt="ETF overlap"></a>
-  <a href="docs/img/forensic-scores-full.png"><img src="docs/img/forensic-scores-thumb.png" width="240" alt="Forensic screen"></a>
-  <a href="docs/img/ticker-card-full.png"><img src="docs/img/ticker-card-thumb.png" width="240" alt="Ticker card"></a>
+  <a href="docs/img/landing-full.png"><img src="docs/img/landing-full.png" width="230" alt="Landing — market desk"></a>
+  <a href="docs/img/overlap-full.png"><img src="docs/img/overlap-full.png" width="230" alt="ETF overlap"></a>
+  <a href="docs/img/ticker-full.png"><img src="docs/img/ticker-full.png" width="230" alt="Ticker card"></a>
+  <a href="docs/img/red-flag-full.png"><img src="docs/img/red-flag-full.png" width="230" alt="Forensic red-flag screen"></a>
 </p>
 
-*(Thumbnails open full-size. See [`docs/PRODUCT.md`](docs/PRODUCT.md) for the
-full gallery and [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for backend
-screenshots — API docs, database viewer, eval run, Cloud Run.)*
+*(Thumbnails open full-size. Full gallery — per-feature screenshots and short
+screen-recordings — in [`docs/PRODUCT.md`](docs/PRODUCT.md); backend evidence
+— API docs, DB viewer, eval run, Cloud Run — in
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).)*
 
 ---
 
@@ -87,7 +113,7 @@ Deep dive, diagrams, and the **course-concept → file mapping**:
 | **Sessions & Memory** | persistent `DatabaseSessionService` + `app/memory_service.py` (long-term) |
 | **Security** | `app/security.py`, `.semgrep/`, `threat_model.md`, rate-limit in `server/main.py` |
 | **Deployability** | `Dockerfile` + Cloud Run (below) |
-| **Agent skills** | `.agents/skills/*/SKILL.md`, `.agents/CONTEXT.md` |
+| **Agent skills / Antigravity** | `.agents/skills/*/SKILL.md`, `.agents/CONTEXT.md` — codified dev patterns + secure-coding standard, authored in the Google Antigravity workflow |
 | **Evaluation** | `eval/run_eval.py` — router accuracy + LLM-as-judge + trajectory |
 
 Core source files:
@@ -99,7 +125,7 @@ Core source files:
 - `app/function_tools.py` — ADK `FunctionTool`s the agent can invoke itself.
 - `app/models.py` — provider factory (Gemini native, or an OpenAI-compatible model via LiteLlm).
 - `app/security.py` — injection-guard + disclaimer-guard.
-- `app/store.py` — durable SQLite turn store (forum-style shareable links) + interest profiles.
+- `app/store.py` — durable SQLite turn store (turn permalinks) + interest profiles.
 - `app/memory_service.py` / `app/personalize.py` — long-term Memory + risk-profile framing.
 - `app/mcp_server.py` — external MCP interface to the tools.
 - `server/main.py` — FastAPI API, rate-limit, durable cache, static frontend serving.
@@ -176,7 +202,7 @@ Interactive docs at `/docs`. Main endpoints:
 | Method & path | Purpose |
 |---|---|
 | `POST /api/ask` | question → `ResponsePanel` (durably cached, shareable) |
-| `GET /api/turn/{seq}` | fetch a stored turn (forum-style deterministic link) |
+| `GET /api/turn/{seq}` | fetch a stored turn by permalink |
 | `DELETE /api/me/{user_id}` | privacy: clear all of a guest's turns + profile |
 | `POST /api/claim` · `POST /api/claim/redeem` | multi-device recovery code (no PII) |
 | `GET /api/entity/ticker/{symbol}` | `TickerCard` |
@@ -202,8 +228,4 @@ uv run python eval/run_eval.py            # router accuracy over the intent set
 uv run python eval/run_eval.py --judge    # + LLM-as-judge (helpfulness/groundedness/safety) + trajectory
 ```
 
-## Documentation
-
-- [`docs/PRODUCT.md`](docs/PRODUCT.md) — needs → accents → features, evidence, demo path.
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — diagrams, concept→file mapping, design decisions, eval results.
-- [`docs/VIDEO_SCRIPT.md`](docs/VIDEO_SCRIPT.md) — 5-minute video storyboard + narration.
+*Deep dives: [Product](docs/PRODUCT.md) · [Architecture](docs/ARCHITECTURE.md) · [Slides](docs/slides/) (all linked in [Contents](#contents) at the top).*

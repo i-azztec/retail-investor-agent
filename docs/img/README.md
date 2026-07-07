@@ -1,55 +1,63 @@
-# Screenshots — capture list
+# Screenshots — inventory
 
-Drop images here with the **exact filenames** below. Docs reference them as
-thumbnail → full-size links (click a thumbnail to open the full image):
+**One file per shot — no separate `-thumb`.** The docs shrink each image with the
+HTML `width` attribute, so a single full-resolution PNG is both the thumbnail and
+the full-size target:
 
 ```html
-<a href="img/overlap-heatmap-full.png"><img src="img/overlap-heatmap-thumb.png" width="240"></a>
+<a href="img/overlap-full.png"><img src="img/overlap-full.png" width="240"></a>
 ```
 
-For each item make **two** files: a `-thumb.png` (~240 px wide) and a `-full.png`
-(full resolution). A quick thumbnail from a full shot:
-
-```bash
-# ImageMagick
-magick overlap-heatmap-full.png -resize 240x overlap-heatmap-thumb.png
-```
-
-If you'd rather ship one file per shot, you can point both links at the same
-`-full.png` — the gallery still works, thumbnails will just be larger.
+Click a thumbnail to open the full image.
 
 ---
 
-## Product (used by `README.md` and `docs/PRODUCT.md`)
+## Product — present (used by `README.md` and `docs/PRODUCT.md`)
 
-| Base name | What to capture |
+**Normal screenshots** (single screen):
+
+| File | What it shows |
 |---|---|
-| `reddit-evidence-1` | The "no sign-up market terminal" post (single message) |
-| `reddit-evidence-2` | The "explain it like I'm 5" post (single message) |
-| `reddit-evidence-3` | The "prison time / IRS hallucination" comment (single message) |
-| `landing` | Landing page (market-desk shelves + news + market map) |
-| `landing-questions` | The generated demo-questions shelf |
-| `overlap-heatmap` | ETF overlap — heatmap |
-| `overlap-treemap` | ETF overlap — look-through treemap |
-| `overlap-bar` | ETF overlap — shared-holdings bar |
-| `overlap-donut` | ETF overlap — sector donut |
-| `forensic-scores` | Forensic panel — scores + formulas + citations |
-| `forensic-bearcase` | Forensic panel — bull vs bear |
-| `ticker-card` | Ticker card modal (1-year chart + VOO baseline + KPIs) |
-| `fee-drag` | Fee-drag calculator (two-line curve) |
-| `glossary` | Glossary term card (ELI5 + investor.gov link) |
-| `entities` | Inline clickable ticker/term chips in prose |
-| `followups` | Follow-ups incl. the personalized concierge one |
+| `coins-growth-wordcloud.png` | Needs word-cloud — README cover |
+| `landing-start.png` | Landing — market desk (entry) |
+| `landing-questions.png` | Generated demo-questions shelf |
+| `landing-market-map.png` | Market-map heatmap |
+| `landing-sign-in.png` | Optional sign-in / recovery code |
+| `ticker-card.png` | Ticker card modal (1-yr chart + VOO baseline + KPIs) |
+| `learn-term.png` | Glossary term card (ELI5 + investor.gov link) |
 
-## Backend (used by `docs/ARCHITECTURE.md`)
+**Full pages** (scroll-captured, tall — shown in a row):
 
-| Base name | How to capture |
+| File | What it shows |
 |---|---|
-| `swagger` | `http://127.0.0.1:8000/docs` — full API |
-| `datasette-db` | `datasette app/data/app.db` → `turns` / `profiles` / `claims` tables |
-| `adk-playground` | `agents-cli` playground rendering the agent graph (`app/adk_app.py`) |
-| `eval-run` | `uv run python eval/run_eval.py --judge` terminal output |
-| `pytest` | `uv run pytest` — 243 passing |
-| `cloudrun` | Cloud Run console: service + public URL |
+| `landing-full.png` | Landing, full page |
+| `ticker-full.png` | Ticker answer, full page |
+| `compare-full.png` | Compare answer, full page |
+| `overlap-full.png` | ETF overlap answer, full page |
+| `fee-calc-full.png` | Fee calculator answer, full page |
+| `red-flag-full.png` | Forensic red-flag screen, full page |
+| `learn-full.png` | Glossary / learn, full page |
 
-Optional extras: `semgrep` (`.semgrep` run), `docker-run` (container serving on 8080).
+**Screen-recordings** are embedded from uploaded GitHub asset URLs
+(`user-attachments/...`), not from the repo. The small `docs/videos/*-web.mp4`
+mirrors are kept for reference; raw captures live in the git-ignored `.videos/`.
+
+## Build — present (used by `docs/ARCHITECTURE.md`)
+
+| File | What it shows |
+|---|---|
+| `antigravity-skills.png` | Agent skills authored in Google Antigravity (captioned) |
+| `antigravity-deployability.png` | Deployability workflow in Antigravity (captioned) |
+
+## Backend — TODO (placeholders in `docs/ARCHITECTURE.md`)
+
+Capture from a local run, drop in with these exact names (single file each):
+
+| File | How to capture |
+|---|---|
+| `swagger.png` | `http://127.0.0.1:8000/docs` — full API |
+| `datasette-db.png` | `datasette app/data/app.db` → `turns` / `profiles` / `claims` |
+| `adk-playground.png` | `agents-cli` playground rendering the agent graph (`app/adk_app.py`) |
+| `eval-run.png` | `uv run python eval/run_eval.py --judge` terminal output |
+| `pytest.png` | `uv run pytest` — 243 passing |
+| `cloudrun.png` | Cloud Run console: service + public URL |

@@ -48,20 +48,6 @@ That single sentence is why **numbers in this product are computed by
 deterministic tools and every one carries a citation** — the LLM writes language,
 never arithmetic.
 
-<!-- SCREENSHOT GROUP: reddit-evidence — screenshots of the individual posts/comments above.
-     Capture 3-4 single messages (NVDA-not-Enron, no-sign-up terminal, ELI5, prison-time/IRS). -->
-<p>
-  <a href="img/main-screen.png"><img src="img/main-screen.png" width="240" alt="Reddit: explain like I'm 5"></a>
-  <a href="img/reddit-evidence-3-full.png"><img src="img/reddit-evidence-3-thumb.png" width="240" alt="Reddit: prison time / IRS hallucination"></a>
-<table>
-  <tr>
-    <td width="240">
-      <video src="https://github.com/user-attachments/assets/6c6d7330-9fdd-4257-ae12-da6148a14fbd" controls width="240"></video>
-    </td>
-  </tr>
-</table>
-</p>
-
 *(Bonus real-world hook for the forensic feature:*
 ["Nvidia Says It's Not Enron in Private Memo Refuting Accounting Questions" (780↑)](https://www.reddit.com/r/stocks/comments/1p5rneb/nvidia_says_its_not_enron_in_private_memo/) *— exactly the anxiety our forensic red-flag screen addresses.)*
 
@@ -124,72 +110,97 @@ ELI5 glossary card with a regulator link.
 
 ---
 
-## 6. Feature walkthrough
+## 6. The product in pictures & motion
 
-### 6.1 Landing — a "market desk", not an empty chat
-Market-map heatmap of mega-caps, live/seed news, and **freshly generated demo
-questions** tied to today's movers — each question wired to a specific agent
-feature.
+Everything below is the real UI — nothing mocked up. Thumbnails open full-size;
+the clips are screen-recordings of live sessions. Ordered the way you meet the
+tools in the app.
 
-<!-- SCREENSHOT GROUP: landing -->
+### Screenshots
+
+<!-- single-screen shots, menu order: landing → ticker → glossary -->
 <p>
-  <a href="img/landing-full.png"><img src="img/landing-thumb.png" width="240" alt="Landing page"></a>
-  <a href="img/landing-questions-full.png"><img src="img/landing-questions-thumb.png" width="240" alt="Generated demo questions"></a>
+  <a href="img/landing-start.png"><img src="img/landing-start.png" width="240" alt="Landing — market desk"></a>
+  <a href="img/landing-questions.png"><img src="img/landing-questions.png" width="240" alt="Generated demo questions"></a>
+  <a href="img/landing-market-map.png"><img src="img/landing-market-map.png" width="240" alt="Market-map heatmap"></a>
+  <a href="img/landing-sign-in.png"><img src="img/landing-sign-in.png" width="240" alt="Optional sign-in / recovery code"></a>
+  <a href="img/ticker-card.png"><img src="img/ticker-card.png" width="240" alt="Ticker card modal"></a>
+  <a href="img/learn-term.png"><img src="img/learn-term.png" width="240" alt="Glossary term card"></a>
 </p>
 
-### 6.2 ETF overlap — the flagship "wow"
-*"I hold VOO, QQQ and VGT — how much do they really overlap?"* → an overlap
-heatmap, a look-through treemap into real companies, a shared-holdings bar with
-weights, and a sector donut. The takeaway ("your three funds are ~X% the same
-mega-caps") lands in five seconds.
+### Full pages (scroll-captured)
 
-<!-- SCREENSHOT GROUP: overlap -->
+The full length of a single answer — top to bottom of the panel — in menu order:
+
 <p>
-  <a href="img/overlap-heatmap-full.png"><img src="img/overlap-heatmap-thumb.png" width="240" alt="Overlap heatmap"></a>
-  <a href="img/overlap-treemap-full.png"><img src="img/overlap-treemap-thumb.png" width="240" alt="Look-through treemap"></a>
-  <a href="img/overlap-bar-full.png"><img src="img/overlap-bar-thumb.png" width="240" alt="Shared holdings bar"></a>
-  <a href="img/overlap-donut-full.png"><img src="img/overlap-donut-thumb.png" width="240" alt="Sector donut"></a>
+  <a href="img/landing-full.png"><img src="img/landing-full.png" width="150" alt="Landing (full page)"></a>
+  <a href="img/ticker-full.png"><img src="img/ticker-full.png" width="150" alt="Ticker card (full page)"></a>
+  <a href="img/compare-full.png"><img src="img/compare-full.png" width="150" alt="Compare (full page)"></a>
+  <a href="img/overlap-full.png"><img src="img/overlap-full.png" width="150" alt="ETF overlap (full page)"></a>
+  <a href="img/fee-calc-full.png"><img src="img/fee-calc-full.png" width="150" alt="Fee calculator (full page)"></a>
+  <a href="img/red-flag-full.png"><img src="img/red-flag-full.png" width="150" alt="Forensic red-flag screen (full page)"></a>
+  <a href="img/learn-full.png"><img src="img/learn-full.png" width="150" alt="Glossary / learn (full page)"></a>
 </p>
 
-### 6.3 Forensic red-flag screen
-*"Should I buy NVDA? Show forensic red flags and the bear case."* → Altman Z /
-Beneish M / Piotroski F scores, each with its **formula and citation**, a
-radar/snowflake and traffic lights, and a mandatory **bull vs bear** panel. It's
-a *screen, not a verdict* — stated plainly.
+### Screen-recordings
 
-<!-- SCREENSHOT GROUP: forensic -->
-<p>
-  <a href="img/forensic-scores-full.png"><img src="img/forensic-scores-thumb.png" width="240" alt="Forensic scores + citations"></a>
-  <a href="img/forensic-bearcase-full.png"><img src="img/forensic-bearcase-thumb.png" width="240" alt="Bull vs bear"></a>
-</p>
+Short clips of live sessions, in menu order:
 
-### 6.4 Ticker card & fee-drag calculator
-Click any company → a dense 1-year chart with an S&P (VOO) baseline on the second
-axis and KPI plates. Ask about fees → a two-line fee-drag curve showing what the
-expense ratio costs over time.
-
-<!-- SCREENSHOT GROUP: ticker-fees -->
-<p>
-  <a href="img/ticker-card-full.png"><img src="img/ticker-card-thumb.png" width="240" alt="Ticker card modal"></a>
-  <a href="img/fee-drag-full.png"><img src="img/fee-drag-thumb.png" width="240" alt="Fee-drag calculator"></a>
-</p>
-
-### 6.5 Glossary, clickable entities & concierge follow-ups
-A jargon question returns an ELI5 glossary card with an investor.gov link. Inline
-tickers/terms are clickable. Follow-ups come in three kinds (deeper / wider /
-simpler), and one is **personalized** from what you looked at earlier this
-session.
-
-<!-- SCREENSHOT GROUP: glossary-followups -->
-<p>
-  <a href="img/glossary-full.png"><img src="img/glossary-thumb.png" width="240" alt="Glossary term card"></a>
-  <a href="img/entities-full.png"><img src="img/entities-thumb.png" width="240" alt="Clickable inline entities"></a>
-  <a href="img/followups-full.png"><img src="img/followups-thumb.png" width="240" alt="Follow-ups incl. personalized"></a>
-</p>
+<table>
+  <tr>
+    <td width="320"><video src="https://github.com/user-attachments/assets/5cdecc1e-1c29-4b64-bda2-bc6814a43267" controls width="320"></video><br><sub>Landing → “learn more” (insiders)</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/6533a6a3-e4e0-49b1-9f03-b34d09ec5798" controls width="320"></video><br><sub>Set risk profile</sub></td>
+  </tr>
+  <tr>
+    <td width="320"><video src="https://github.com/user-attachments/assets/8ca211e8-0d24-4760-8f50-2df25a5082d7" controls width="320"></video><br><sub>Ticker card — chart & pros</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/fc304b04-980d-4c1c-95fe-2ee4b9d5cb85" controls width="320"></video><br><sub>Ticker — go deeper</sub></td>
+  </tr>
+  <tr>
+    <td width="320"><video src="https://github.com/user-attachments/assets/4f20fb0d-d22c-4a39-8c56-dff7931f1a95" controls width="320"></video><br><sub>Compare stocks</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/421c6066-5e6e-43cb-916e-fd14ec3c2a34" controls width="320"></video><br><sub>ETF overlap + follow-up</sub></td>
+  </tr>
+  <tr>
+    <td width="320"><video src="https://github.com/user-attachments/assets/28df2dc4-b455-4591-bb01-9387d1c28cd4" controls width="320"></video><br><sub>Forensic red-flag screen</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/54fce321-498a-45f3-ae64-8ac2fbc05a71" controls width="320"></video><br><sub>Ask: reliable dividends</sub></td>
+  </tr>
+</table>
 
 ---
 
-## 7. Demo path (for the video / live walkthrough)
+## 7. Feature walkthrough
+
+### 7.1 Landing — a "market desk", not an empty chat
+Market-map heatmap of mega-caps, live/seed news, and **freshly generated demo
+questions** tied to today's movers — each question wired to a specific agent
+feature. *(See `landing-*` shots and the landing clip in §6.)*
+
+### 7.2 ETF overlap — the flagship "wow"
+*"I hold VOO, QQQ and VGT — how much do they really overlap?"* → an overlap
+heatmap, a look-through treemap into real companies, a shared-holdings bar with
+weights, and a sector donut. The takeaway ("your three funds are ~X% the same
+mega-caps") lands in five seconds. *(See `overlap-full` and the overlap clip in §6.)*
+
+### 7.3 Forensic red-flag screen
+*"Should I buy NVDA? Show forensic red flags and the bear case."* → Altman Z /
+Beneish M / Piotroski F scores, each with its **formula and citation**, a
+radar/snowflake and traffic lights, and a mandatory **bull vs bear** panel. It's
+a *screen, not a verdict* — stated plainly. *(See `red-flag-full` and the red-flag clip in §6.)*
+
+### 7.4 Ticker card & fee-drag calculator
+Click any company → a dense 1-year chart with an S&P (VOO) baseline on the second
+axis and KPI plates. Ask about fees → a two-line fee-drag curve showing what the
+expense ratio costs over time. *(See `ticker-card`, `ticker-full`, `fee-calc-full`
+and the ticker clips in §6.)*
+
+### 7.5 Glossary, clickable entities & concierge follow-ups
+A jargon question returns an ELI5 glossary card with an investor.gov link. Inline
+tickers/terms are clickable. Follow-ups come in three kinds (deeper / wider /
+simpler), and one is **personalized** from what you looked at earlier this
+session. *(See `learn-term`, `learn-full` in §6.)*
+
+---
+
+## 8. Demo path (for the video / live walkthrough)
 
 1. **Landing** — market-desk shelves + generated demo questions.
 2. **ETF overlap** (`VOO, QQQ, VGT`): heatmap + treemap + shared holdings + donut.
@@ -200,7 +211,7 @@ session.
 
 ---
 
-## 8. Safety, privacy & honest limits
+## 9. Safety, privacy & honest limits
 
 - **Read-only.** The agent informs; it never places a trade or touches an account.
 - **No PII.** Guests are anonymous UUIDs. Cross-device recovery stores only a
@@ -212,7 +223,7 @@ session.
   reliability; live news/prices are best-effort. We surface this rather than
   present stale data as "now."
 
-## 9. What we deliberately did *not* add
+## 10. What we deliberately did *not* add
 
 We resisted new live features (broker aggregation, full backtests, insider feeds,
 arbitrary Q&A depth) in favor of making the **agent layer real** and the **data

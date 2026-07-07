@@ -114,7 +114,7 @@ sequenceDiagram
   F-->>U: JSON panel (+ meta.turn_seq / turn_slug for hash link)
 ```
 
-## 4. Persistence & context (forum-style turn store)
+## 4. Persistence & context (turn store)
 
 ```mermaid
 flowchart LR
@@ -129,7 +129,7 @@ flowchart LR
 ```
 
 Two decoupled stores share one SQLite file: the **turn store** (every answered
-question as a forum "topic" — a deterministic `seq` + readable `slug`, chained by
+question as a turn record — a deterministic `seq` + readable `slug`, chained by
 `parent_seq` for follow-ups) and the **interest profile** (durable
 personalization). A turn is keyed by `content_key`, so the same question in the
 same context always maps to the same `seq` — links are deterministic and
@@ -187,32 +187,51 @@ recovery stores only a code hash, so there is no PII to leak.
 | Multi-device (no PII) | `store.create_claim/redeem_claim`, `/api/claim` + `/api/claim/redeem`, frontend recovery-code UI | recovery-code seam binds a guest id across devices; only the code hash is stored, zero PII |
 | Security | `app/security.py`, `.semgrep/`, `.pre-commit-config.yaml`, `threat_model.md`, rate-limit in `server/main.py` | injection-guard + disclaimer-guard + rate-limit + semgrep + STRIDE |
 | Evaluation | `eval/evalset.json`, `eval/run_eval.py` (`--judge`) | router accuracy + Agent-Quality LLM-as-judge (helpfulness/groundedness/safety) + trajectory (incl. agent-issued tool calls) |
-| Agent skills | `.agents/skills/*`, `.agents/CONTEXT.md` | codified dev patterns + secure-coding standard |
+| Agent skills / Antigravity | `.agents/skills/*`, `.agents/CONTEXT.md` | codified dev patterns + secure-coding standard, authored and driven through the Google Antigravity workflow (see screenshots below) |
 | Deployability | `Dockerfile`, README (3 run modes), Cloud Run | one container, public URL |
 | Grounding / citations | `Citation` on every number (tools) | LLM never invents numbers |
 | ADK 2.x App form | `app/adk_app.py`, `agent.build_app` (`App(root_agent=…)`) | the graph is discoverable by `agents-cli` (playground / run / eval) |
 
 ---
 
+## Antigravity & agent skills
+
+The dev workflow itself is agentic: the project's skills (`.agents/skills/*`) and
+secure-coding standard (`.agents/CONTEXT.md`) were authored and driven through the
+**Google Antigravity** environment.
+
+<table>
+  <tr>
+    <td width="380"><a href="img/antigravity-skills.png"><img src="img/antigravity-skills.png" width="380" alt="Agent skills in Google Antigravity"></a></td>
+    <td width="380"><a href="img/antigravity-deployability.png"><img src="img/antigravity-deployability.png" width="380" alt="Deployability workflow in Google Antigravity"></a></td>
+  </tr>
+  <tr>
+    <td width="380"><sub><b>Agent skills.</b> Codified dev patterns and the secure-coding standard authored as Antigravity skills.</sub></td>
+    <td width="380"><sub><b>Deployability.</b> The container/Cloud-Run deploy workflow driven from Antigravity.</sub></td>
+  </tr>
+</table>
+
 ## Backend screenshots
 
-These evidence the "technically-real" claims — capture and drop into `docs/img/`.
+These evidence the "technically-real" claims. *(Placeholders — captured from a
+local run; drop the files into `docs/img/` with these exact names.)*
 
-<!-- SCREENSHOT GROUP: backend — Swagger, DB viewer, ADK playground, eval, tests, Cloud Run -->
+<!-- SCREENSHOT GROUP: backend — Swagger, DB viewer, ADK playground, eval, tests, Cloud Run.
+     One file per shot (no separate -thumb); the width attribute makes the thumbnail. -->
 <p>
-  <a href="img/swagger-full.png"><img src="img/swagger-thumb.png" width="240" alt="Swagger /docs — full API"></a>
-  <a href="img/datasette-db-full.png"><img src="img/datasette-db-thumb.png" width="240" alt="Datasette DB viewer — turns / profiles / claims"></a>
-  <a href="img/adk-playground-full.png"><img src="img/adk-playground-thumb.png" width="240" alt="ADK agents-cli playground graph"></a>
+  <a href="img/swagger.png"><img src="img/swagger.png" width="240" alt="Swagger /docs — full API"></a>
+  <a href="img/datasette-db.png"><img src="img/datasette-db.png" width="240" alt="Datasette DB viewer — turns / profiles / claims"></a>
+  <a href="img/adk-playground.png"><img src="img/adk-playground.png" width="240" alt="ADK agents-cli playground graph"></a>
 </p>
 <p>
-  <a href="img/eval-run-full.png"><img src="img/eval-run-thumb.png" width="240" alt="eval/run_eval.py --judge output"></a>
-  <a href="img/pytest-full.png"><img src="img/pytest-thumb.png" width="240" alt="243 tests passing"></a>
-  <a href="img/cloudrun-full.png"><img src="img/cloudrun-thumb.png" width="240" alt="Cloud Run service + public URL"></a>
+  <a href="img/eval-run.png"><img src="img/eval-run.png" width="240" alt="eval/run_eval.py --judge output"></a>
+  <a href="img/pytest.png"><img src="img/pytest.png" width="240" alt="243 tests passing"></a>
+  <a href="img/cloudrun.png"><img src="img/cloudrun.png" width="240" alt="Cloud Run service + public URL"></a>
 </p>
 
 - **Swagger** — `http://127.0.0.1:8000/docs` (the full API surface).
 - **Database viewer** — `datasette app/data/app.db` shows the `turns`, `profiles`,
-  and `claims` tables (forum-style records, zero-PII claim hashes) plus the ADK
+  and `claims` tables (turn records, zero-PII claim hashes) plus the ADK
   `sessions`/`events` tables.
 - **ADK playground** — `agents-cli` discovers `app/adk_app.py` (`App(root_agent=…)`)
   and renders the router → analyst‖skeptic → narrator graph.
@@ -241,8 +260,8 @@ a valid generic/glossary panel.
 - **Context through ADK, not around it.** A persistent `DatabaseSessionService`
   threads state across turns; long-term `StoreMemoryService` feeds it — the
   Context-Engineering (Sessions & Memory) pattern from the course.
-- **Deterministic, shareable links.** The turn store makes every answer a
-  forum-style topic with a stable `#/t/<seq>` link and an auditable record of the
+- **Deterministic, shareable links.** The turn store gives every answer a
+  stable permalink (`#/t/<seq>`) and an auditable record of the
   exact context the LLM saw — no ad-hoc URL cramming, no nondeterministic recompute.
 - **Seed catalog, not runtime cache.** Dense demo charts live in a committed
   `ticker_cards_seed/` (not the gitignored `.cache/`) so they survive the Docker
