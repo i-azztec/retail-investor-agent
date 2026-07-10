@@ -59,7 +59,7 @@ A full walkthrough — landing, ETF overlap, ticker cards, the forensic red-flag
 screen, the fee calculator and the concierge follow-up:
 
 
-<video src="/docs/videos/agent-presentation-long-web.mp4" controls width="640"></video>
+<video src="./docs/videos/agent-presentation-long-web.mp4" controls width="640"></video>
 
 📄 **Slides:** [`docs/slides/Retail-Investor-Agent_presentation.pdf`](docs/slides/Retail-Investor-Agent_presentation.pdf)
 
