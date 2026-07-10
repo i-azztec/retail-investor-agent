@@ -58,7 +58,7 @@ reliability; the UI surfaces this through honesty notes and citations.
 A full walkthrough — landing, ETF overlap, ticker cards, the forensic red-flag
 screen, the fee calculator and the concierge follow-up:
 
-<video src="https://github.com/i-azztec/retail-investor-agent/raw/refs/heads/main/docs/videos/agent-presentation-long-web.mp4" controls width="640"></video>
+<video src="https://github.com/i-azztec/retail-investor-agent/raw/main/docs/videos/agent-presentation-long-web.mp4" controls width="640"></video>
 
 📄 **Slides:** [`docs/slides/Retail-Investor-Agent_presentation.pdf`](docs/slides/Retail-Investor-Agent_presentation.pdf)
 
