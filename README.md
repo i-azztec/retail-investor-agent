@@ -62,7 +62,6 @@ screen, the fee calculator and the concierge follow-up:
 
 ▶️ **Watch on YouTube:** https://youtu.be/jbKbbwPKx1I
 
-[![Retail Investor Agent — demo walkthrough](https://img.youtube.com/vi/jbKbbwPKx1I/hqdefault.jpg)](https://youtu.be/jbKbbwPKx1I)
 
 📄 **Slides:** [`docs/slides/Retail-Investor-Agent_presentation.pdf`](docs/slides/Retail-Investor-Agent_presentation.pdf)
 
