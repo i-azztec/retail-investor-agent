@@ -58,7 +58,11 @@ reliability; the UI surfaces this through honesty notes and citations.
 A full walkthrough — landing, ETF overlap, ticker cards, the forensic red-flag
 screen, the fee calculator and the concierge follow-up:
 
-<video src="https://github.com/i-azztec/retail-investor-agent/raw/main/docs/videos/agent-presentation-long-web.mp4" controls width="640"></video>
+<video src="https://github.com/user-attachments/assets/8722b9d5-8d68-453f-8fce-b8698ce4cc29" controls width="640"></video>
+
+▶️ **Watch on YouTube:** https://youtu.be/jbKbbwPKx1I
+
+[![Retail Investor Agent — demo walkthrough](https://img.youtube.com/vi/jbKbbwPKx1I/hqdefault.jpg)](https://youtu.be/jbKbbwPKx1I)
 
 📄 **Slides:** [`docs/slides/Retail-Investor-Agent_presentation.pdf`](docs/slides/Retail-Investor-Agent_presentation.pdf)
 

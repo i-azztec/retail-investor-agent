@@ -148,20 +148,20 @@ Short clips of live sessions, in menu order:
 
 <table>
   <tr>
-    <td width="320"><video src="https://github.com/user-attachments/assets/5cdecc1e-1c29-4b64-bda2-bc6814a43267" controls width="320"></video><br><sub>Landing → “learn more” (insiders)</sub></td>
-    <td width="320"><video src="https://github.com/user-attachments/assets/6533a6a3-e4e0-49b1-9f03-b34d09ec5798" controls width="320"></video><br><sub>Set risk profile</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/3ee41135-8798-4161-ab59-3a5c98fd7a0b" controls width="320"></video><br><sub>Landing → “learn more” (insiders)</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/ad868a75-bef8-4945-9eb8-6006c811bbe0" controls width="320"></video><br><sub>Set risk profile</sub></td>
   </tr>
   <tr>
-    <td width="320"><video src="https://github.com/user-attachments/assets/8ca211e8-0d24-4760-8f50-2df25a5082d7" controls width="320"></video><br><sub>Ticker card — chart & pros</sub></td>
-    <td width="320"><video src="https://github.com/user-attachments/assets/fc304b04-980d-4c1c-95fe-2ee4b9d5cb85" controls width="320"></video><br><sub>Ticker — go deeper</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/55b75b0a-5e98-4ea4-b88b-ee2c55e7d446" controls width="320"></video><br><sub>Ticker card — chart & pros</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/870fbeae-5b6e-4e7b-abb3-86d8338d3d14" controls width="320"></video><br><sub>Ticker — go deeper</sub></td>
   </tr>
   <tr>
-    <td width="320"><video src="https://github.com/user-attachments/assets/4f20fb0d-d22c-4a39-8c56-dff7931f1a95" controls width="320"></video><br><sub>Compare stocks</sub></td>
-    <td width="320"><video src="https://github.com/user-attachments/assets/421c6066-5e6e-43cb-916e-fd14ec3c2a34" controls width="320"></video><br><sub>ETF overlap + follow-up</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/29580f91-2505-4f2a-a856-4effeafec806" controls width="320"></video><br><sub>Compare stocks</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/5fc4415a-4589-4b32-99af-9a2721950dd4" controls width="320"></video><br><sub>ETF overlap + follow-up</sub></td>
   </tr>
   <tr>
-    <td width="320"><video src="https://github.com/user-attachments/assets/28df2dc4-b455-4591-bb01-9387d1c28cd4" controls width="320"></video><br><sub>Forensic red-flag screen</sub></td>
-    <td width="320"><video src="https://github.com/user-attachments/assets/54fce321-498a-45f3-ae64-8ac2fbc05a71" controls width="320"></video><br><sub>Ask: reliable dividends</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/f3185ddc-6217-4ae8-b04f-77ebe8d9614a" controls width="320"></video><br><sub>Forensic red-flag screen</sub></td>
+    <td width="320"><video src="https://github.com/user-attachments/assets/3b7e9ac5-1784-46db-89fd-48680054855b" controls width="320"></video><br><sub>Ask: reliable dividends</sub></td>
   </tr>
 </table>
 
